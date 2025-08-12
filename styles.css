@@ -527,6 +527,7 @@ body {
 .footer-logo .footer-logo-image {
     height: 45px;
     width: auto;
+    filter: brightness(1.5) contrast(0.8);
 }
 
 .footer-section h3,
