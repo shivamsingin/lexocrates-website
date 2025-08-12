@@ -134,16 +134,7 @@ body {
     align-items: center;
 }
 
-.hero-logo {
-    margin-bottom: 2rem;
-    text-align: center;
-}
 
-.hero-logo .hero-logo-image {
-    height: 90px;
-    width: auto;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-}
 
 .hero-content h1 {
     font-size: 3.5rem;
