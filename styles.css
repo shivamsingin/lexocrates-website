@@ -49,7 +49,7 @@ body {
     gap: 0.5rem;
 }
 
-.nav-logo svg {
+.nav-logo .logo-image {
     height: 40px;
     width: auto;
 }
@@ -139,7 +139,7 @@ body {
     text-align: center;
 }
 
-.hero-logo svg {
+.hero-logo .hero-logo-image {
     height: 90px;
     width: auto;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
@@ -537,7 +537,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.footer-logo svg {
+.footer-logo .footer-logo-image {
     height: 45px;
     width: auto;
 }
