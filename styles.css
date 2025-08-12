@@ -54,17 +54,11 @@ body {
     width: auto;
 }
 
-.nav-logo h2 {
-    color: #212E44;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 0.2rem;
-}
-
 .nav-logo span {
     color: #BC724A;
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .nav-menu {
