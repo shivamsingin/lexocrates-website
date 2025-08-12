@@ -1,0 +1,18 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Emblem for Favicon -->
+  <g id="emblem">
+    <!-- Inverted trapezoidal base -->
+    <path d="M6 24 L12 20 L16 20 L22 24 Z" fill="#BC724A" stroke="#212E44" stroke-width="0.5"/>
+    
+    <!-- Three vertical pillars -->
+    <rect x="8" y="16" width="1" height="4" fill="#BC724A"/>
+    <rect x="12" y="16" width="1" height="4" fill="#BC724A"/>
+    <rect x="16" y="16" width="1" height="4" fill="#BC724A"/>
+    
+    <!-- Horizontal bar connecting pillars -->
+    <rect x="8" y="16" width="9" height="1" fill="#BC724A"/>
+    
+    <!-- Stylized flame -->
+    <path d="M14 10 Q15 8 16 10 Q17 12 15 14 Q14 12 13 14 Q12 12 14 10" fill="#BC724A"/>
+  </g>
+</svg>

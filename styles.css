@@ -43,6 +43,17 @@ body {
     align-items: center;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-logo svg {
+    height: 40px;
+    width: auto;
+}
+
 .nav-logo h2 {
     color: #212E44;
     font-size: 1.8rem;
@@ -121,6 +132,17 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+}
+
+.hero-logo {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero-logo svg {
+    height: 90px;
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 .hero-content h1 {
@@ -509,6 +531,15 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-logo svg {
+    height: 45px;
+    width: auto;
 }
 
 .footer-section h3,
