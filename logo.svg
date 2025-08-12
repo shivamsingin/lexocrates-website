@@ -1,23 +1,23 @@
 <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-  <!-- Logo Emblem -->
+  <!-- Logo Emblem - Simplified Torch/Pillar Design -->
   <g id="emblem">
-    <!-- Inverted trapezoidal base -->
-    <path d="M10 45 L25 35 L35 35 L50 45 Z" fill="#BC724A" stroke="#212E44" stroke-width="1"/>
+    <!-- Base platform -->
+    <rect x="15" y="40" width="30" height="4" fill="#BC724A" rx="2"/>
     
     <!-- Three vertical pillars -->
-    <rect x="18" y="25" width="3" height="10" fill="#BC724A"/>
-    <rect x="25" y="25" width="3" height="10" fill="#BC724A"/>
-    <rect x="32" y="25" width="3" height="10" fill="#BC724A"/>
+    <rect x="20" y="25" width="2" height="15" fill="#BC724A"/>
+    <rect x="25" y="25" width="2" height="15" fill="#BC724A"/>
+    <rect x="30" y="25" width="2" height="15" fill="#BC724A"/>
     
-    <!-- Horizontal bar connecting pillars -->
-    <rect x="18" y="25" width="17" height="3" fill="#BC724A"/>
+    <!-- Top horizontal bar -->
+    <rect x="20" y="25" width="12" height="2" fill="#BC724A"/>
     
-    <!-- Stylized flame -->
-    <path d="M28 15 Q30 10 32 15 Q34 20 30 25 Q28 20 26 25 Q24 20 28 15" fill="#BC724A"/>
+    <!-- Flame element -->
+    <path d="M26 20 Q28 15 30 20 Q32 25 28 28 Q26 25 24 28 Q22 25 26 20" fill="#BC724A"/>
   </g>
   
   <!-- Logo Text -->
-  <text x="70" y="35" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#212E44" text-anchor="start">
+  <text x="60" y="35" font-family="Inter, sans-serif" font-size="22" font-weight="600" fill="#212E44" text-anchor="start">
     Lexocrates
   </text>
 </svg>
