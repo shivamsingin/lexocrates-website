@@ -11,6 +11,32 @@ body {
     color: #212E44;
     overflow-x: hidden;
     background-color: #EBEADE;
+    text-align: left;
+}
+
+/* Container for consistent alignment */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Improved grid system */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .container {
@@ -112,7 +138,10 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #212E44 0%, #BC724A 100%);
+    background: linear-gradient(135deg, rgba(33, 46, 68, 0.9) 0%, rgba(188, 114, 74, 0.9) 100%), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     padding: 120px 0 80px;
     min-height: 100vh;
@@ -223,14 +252,16 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     color: #212E44;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
 .section-header p {
     font-size: 1.1rem;
     color: #BC724A;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Services Section */
@@ -252,6 +283,20 @@ body {
     box-shadow: 0 10px 30px rgba(33, 46, 68, 0.1);
     transition: all 0.3s ease;
     border: 1px solid #BC724A;
+    overflow: hidden;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
 }
 
 .service-card:hover {
@@ -313,11 +358,27 @@ body {
     background: white;
 }
 
+.about img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(33, 46, 68, 0.1);
+}
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+}
+
+.about-content img {
+    order: 1;
+}
+
+.about-content .about-text {
+    order: 2;
 }
 
 .about-text h2 {
@@ -406,6 +467,20 @@ body {
     box-shadow: 0 10px 30px rgba(33, 46, 68, 0.1);
     transition: all 0.3s ease;
     border: 1px solid #BC724A;
+    overflow: hidden;
+}
+
+.industry-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.industry-card:hover img {
+    transform: scale(1.05);
 }
 
 .industry-card:hover {
@@ -437,10 +512,27 @@ body {
     background: white;
 }
 
+.contact img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(33, 46, 68, 0.1);
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+    align-items: center;
+}
+
+.contact-content img {
+    order: 1;
+}
+
+.contact-content .contact-info {
+    order: 2;
 }
 
 .contact-info {
@@ -1545,6 +1637,43 @@ html {
 
 /* Responsive Design Updates */
 @media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-content img,
+    .about-content .about-text {
+        order: unset;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-content img,
+    .contact-content .contact-info {
+        order: unset;
+    }
+    
+    .industries-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
     .overview-content,
     .story-content,
     .location-content {
