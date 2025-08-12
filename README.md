@@ -112,3 +112,4 @@ Design inspired by leading LPO companies:
 ---
 
 **Ready to use!** Simply open `index.html` in your browser to view the website.
+# Lexocrates
