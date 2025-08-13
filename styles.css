@@ -646,6 +646,316 @@ body {
     font-size: 1rem;
 }
 
+/* Case Studies Section */
+.case-studies {
+    background: white;
+    padding: 5rem 0;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.case-study {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(33, 46, 68, 0.1);
+    border: 1px solid #EBEADE;
+    transition: all 0.3s ease;
+}
+
+.case-study:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(33, 46, 68, 0.15);
+    border-color: #BC724A;
+}
+
+.case-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.case-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #BC724A, #212E44);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.case-study:hover .case-icon {
+    transform: scale(1.1);
+}
+
+.case-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.case-header h3 {
+    color: #212E44;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.case-study p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.case-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.result-tag {
+    background: linear-gradient(135deg, #EBEADE, #BC724A);
+    color: #212E44;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.case-study:hover .result-tag {
+    background: linear-gradient(135deg, #BC724A, #212E44);
+    color: white;
+}
+
+/* Industry Stats Section */
+.industry-stats {
+    background: linear-gradient(135deg, #212E44 0%, #BC724A 100%);
+    padding: 5rem 0;
+    color: white;
+}
+
+.industry-stats .section-header h2 {
+    color: white;
+}
+
+.industry-stats .section-header p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.stat-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #EBEADE;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item h3 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.stat-item p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Industry Pages Styles */
+.industry-overview {
+    padding: 5rem 0;
+    background: white;
+}
+
+.industry-services {
+    background: linear-gradient(135deg, #f8f9fa 0%, #EBEADE 100%);
+    padding: 5rem 0;
+}
+
+.industry-challenges {
+    background: white;
+    padding: 5rem 0;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.challenge-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(33, 46, 68, 0.1);
+    border: 1px solid #EBEADE;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.challenge-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(33, 46, 68, 0.15);
+    border-color: #BC724A;
+}
+
+.challenge-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #BC724A, #212E44);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.challenge-item:hover .challenge-icon {
+    transform: scale(1.1);
+}
+
+.challenge-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.challenge-item h3 {
+    color: #212E44;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.challenge-item p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.success-story {
+    background: linear-gradient(135deg, #212E44 0%, #BC724A 100%);
+    padding: 5rem 0;
+    color: white;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-text h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.story-text p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.story-text ul {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.story-text ul li {
+    margin-bottom: 0.5rem;
+}
+
+.story-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.result-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.result-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #EBEADE;
+    margin-bottom: 0.5rem;
+}
+
+.result-label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
 .industry-card:hover img {
     transform: scale(1.05);
 }
@@ -2119,6 +2429,91 @@ html {
     }
     
     .solution-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .case-study {
+        padding: 2rem;
+    }
+    
+    .case-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .case-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .case-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .stat-item {
+        padding: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .stat-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .challenges-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .challenge-item {
+        padding: 2rem;
+    }
+    
+    .challenge-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .challenge-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .story-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .story-text p {
+        font-size: 1rem;
+    }
+    
+    .story-results {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .result-item {
+        padding: 1rem;
+    }
+    
+    .result-number {
         font-size: 1.5rem;
     }
     
