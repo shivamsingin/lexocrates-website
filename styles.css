@@ -582,6 +582,16 @@ body {
     gap: 2rem;
 }
 
+.contact-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.contact-row .contact-item {
+    flex: 1;
+}
+
 .contact-item {
     display: flex;
     align-items: flex-start;
@@ -1718,6 +1728,15 @@ html {
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .contact-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .contact-row .contact-item {
+        flex: none;
     }
     
     .contact-content img,
