@@ -580,12 +580,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact-card {
@@ -596,6 +602,8 @@ body {
     border: 1px solid #EBEADE;
     transition: all 0.3s ease;
     text-align: center;
+    width: 100%;
+    max-width: 320px;
 }
 
 .contact-card:hover {
