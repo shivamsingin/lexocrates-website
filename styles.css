@@ -74,11 +74,14 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
+    padding: 5px 0;
 }
 
 .nav-logo .logo-image {
-    height: 52px;
-    width: auto;
+    height: 70px !important;
+    width: auto !important;
+    max-width: none !important;
+    transform: scale(1.2) !important;
 }
 
 .nav-logo span {
@@ -1277,8 +1280,10 @@ body {
 }
 
 .footer-logo .footer-logo-image {
-    height: 57px;
-    width: auto;
+    height: 75px !important;
+    width: auto !important;
+    max-width: none !important;
+    transform: scale(1.2) !important;
 }
 
 .footer-section h3,
