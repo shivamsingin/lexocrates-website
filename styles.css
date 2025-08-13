@@ -689,8 +689,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     justify-items: center;
+    align-items: center;
     max-width: 800px;
     margin: 0 auto;
+    place-items: center;
 }
 
 .contact-card {
@@ -703,6 +705,7 @@ body {
     text-align: center;
     width: 100%;
     max-width: 350px;
+    margin: 0 auto;
 }
 
 .contact-card:hover {
