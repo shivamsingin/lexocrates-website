@@ -375,6 +375,15 @@ body {
     margin: 0 auto;
 }
 
+.about-content .about-text {
+    order: 1;
+    text-align: left;
+}
+
+.about-content .about-image {
+    order: 2;
+}
+
 .about-content img {
     order: 1;
     width: 100%;
