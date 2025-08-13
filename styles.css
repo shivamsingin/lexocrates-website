@@ -371,14 +371,22 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about-content img {
     order: 1;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(33, 46, 68, 0.1);
 }
 
 .about-content .about-text {
     order: 2;
+    text-align: left;
 }
 
 .about-text h2 {
@@ -474,19 +482,24 @@ body {
 
 .industries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .industry-card {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(33, 46, 68, 0.1);
     transition: all 0.3s ease;
     border: 1px solid #BC724A;
     overflow: hidden;
+    width: 100%;
+    max-width: 320px;
 }
 
 .industry-card img {
@@ -1704,7 +1717,13 @@ html {
     }
     
     .industries-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    
+    .industry-card {
+        max-width: 100%;
+        padding: 2rem;
     }
     
     .overview-content,
