@@ -587,10 +587,10 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     justify-items: center;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -603,7 +603,7 @@ body {
     transition: all 0.3s ease;
     text-align: center;
     width: 100%;
-    max-width: 320px;
+    max-width: 350px;
 }
 
 .contact-card:hover {
@@ -1804,6 +1804,7 @@ html {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        max-width: 100%;
     }
     
     .contact-card {
