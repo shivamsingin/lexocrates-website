@@ -316,6 +316,9 @@ body {
     transition: all 0.3s ease;
     border: 1px solid #BC724A;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card img {
@@ -382,6 +385,12 @@ body {
     left: 0;
     color: #BC724A;
     font-weight: bold;
+}
+
+.service-card .btn-outline {
+    margin-top: auto;
+    align-self: center;
+    text-align: center;
 }
 
 /* About Section */
@@ -541,6 +550,9 @@ body {
     overflow: hidden;
     width: 100%;
     max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .industry-card:hover {
@@ -605,6 +617,12 @@ body {
 .industry-card:hover .feature-tag {
     background: linear-gradient(135deg, #BC724A, #212E44);
     color: white;
+}
+
+.industry-card .btn-outline {
+    margin-top: auto;
+    align-self: center;
+    text-align: center;
 }
 
 .industry-card img {
