@@ -2871,6 +2871,9 @@ html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid #e2e8f0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .contact-method img {
@@ -2913,6 +2916,12 @@ html {
     color: #718096;
     line-height: 1.6;
     margin-bottom: 1rem;
+}
+
+.contact-method .btn-outline {
+    margin-top: auto;
+    align-self: center;
+    text-align: center;
 }
 
 /* Contact Form Section */
