@@ -1153,30 +1153,29 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr); /* Changed to 4 equal columns */
+    gap: 2rem; /* Increased gap for better spacing */
     justify-items: center;
-    align-items: center;
+    align-items: stretch; /* Changed to stretch for equal height */
     width: 100%;
     margin: 0 auto;
-    place-items: center;
 }
 
 .contact-card {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem 2rem; /* Increased padding for better proportions */
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(33, 46, 68, 0.1);
     border: 1px solid #EBEADE;
     transition: all 0.3s ease;
     text-align: center;
     width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    min-height: 200px;
+    height: 100%; /* Ensure equal height */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    min-height: 220px; /* Increased minimum height */
 }
 
 .contact-card:hover {
@@ -1443,6 +1442,11 @@ body {
         grid-template-columns: 1fr;
     }
     
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
     .services-grid {
         grid-template-columns: 1fr;
     }
@@ -1476,6 +1480,16 @@ body {
     
     .contact-form {
         padding: 1.5rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
+        min-height: 200px;
     }
 }
 
