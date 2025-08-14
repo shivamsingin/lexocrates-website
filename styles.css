@@ -1104,17 +1104,23 @@ body {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
 }
 
 .contact-content img {
     order: 1;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(33, 46, 68, 0.1);
 }
 
 .contact-content .contact-info {
     order: 2;
+    width: 100%;
 }
 
 .contact-info {
@@ -1132,7 +1138,7 @@ body {
     gap: 1.5rem;
     justify-items: center;
     align-items: center;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     place-items: center;
 }
@@ -1146,7 +1152,7 @@ body {
     transition: all 0.3s ease;
     text-align: center;
     width: 100%;
-    max-width: 280px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -2331,6 +2337,18 @@ html {
 }
 
 /* Responsive Design Updates */
+@media (max-width: 1024px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.5rem;
@@ -2361,7 +2379,7 @@ html {
     }
     
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         max-width: 100%;
     }
