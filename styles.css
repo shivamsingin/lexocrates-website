@@ -764,10 +764,10 @@ body {
 .stat-item {
     text-align: center;
     padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -802,8 +802,9 @@ body {
 .stat-number {
     font-size: 3rem;
     font-weight: 700;
-    color: #EBEADE;
+    color: white;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .stat-item h3 {
@@ -811,12 +812,14 @@ body {
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .stat-item p {
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
     line-height: 1.6;
     font-size: 0.95rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Industry Pages Styles */
