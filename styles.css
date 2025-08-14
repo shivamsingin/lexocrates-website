@@ -1104,15 +1104,15 @@ body {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
     align-items: start;
 }
 
 .contact-content img {
     order: 1;
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(33, 46, 68, 0.1);
@@ -1120,6 +1120,11 @@ body {
 
 .contact-content .contact-info {
     order: 2;
+    width: 100%;
+}
+
+.contact-content .contact-form {
+    order: 3;
     width: 100%;
 }
 
@@ -1134,7 +1139,7 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     justify-items: center;
     align-items: center;
@@ -1145,7 +1150,7 @@ body {
 
 .contact-card {
     background: white;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(33, 46, 68, 0.1);
     border: 1px solid #EBEADE;
@@ -1154,6 +1159,10 @@ body {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-card:hover {
@@ -1237,9 +1246,14 @@ body {
 }
 
 .contact-form {
-    background: #EBEADE;
+    background: linear-gradient(135deg, #f8f9fa 0%, #EBEADE 100%);
     padding: 2.5rem;
-    border-radius: 15px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(33, 46, 68, 0.1);
+    border: 1px solid rgba(188, 114, 74, 0.2);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
 }
 
 .form-group {
@@ -2455,8 +2469,13 @@ html {
 /* Responsive Design Updates */
 @media (max-width: 1024px) {
     .contact-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-content .contact-form {
+        order: 4;
+        grid-column: 1 / -1;
     }
     
     .contact-grid {
@@ -2492,6 +2511,15 @@ html {
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-content .contact-form {
+        order: 4;
     }
     
     .contact-grid {
