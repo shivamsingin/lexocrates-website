@@ -2930,8 +2930,47 @@ html {
     background: white;
 }
 
+.form-content {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-content h2 {
+    margin-bottom: 1rem;
+}
+
+.form-content p {
+    margin-bottom: 2rem;
+}
+
 .contact-features {
-    margin-top: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.contact-features h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.emergency-contact {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem;
+    background: #f7fafc;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.emergency-contact h4 {
+    margin-bottom: 1rem;
+    color: #1a365d;
+    font-size: 1.3rem;
+}
+
+.emergency-contact p {
+    margin-bottom: 1.5rem;
+    color: #718096;
 }
 
 .contact-features .feature {
