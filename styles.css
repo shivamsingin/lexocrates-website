@@ -3053,6 +3053,23 @@ html {
     color: #718096;
 }
 
+.emergency-contact .btn-secondary {
+    background: #1a365d;
+    color: white;
+    border: 2px solid #1a365d;
+    font-weight: 600;
+    padding: 12px 24px;
+    font-size: 1rem;
+}
+
+.emergency-contact .btn-secondary:hover {
+    background: #2d3748;
+    border-color: #2d3748;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 54, 93, 0.3);
+}
+
 .contact-features .feature {
     display: flex;
     align-items: center;
