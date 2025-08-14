@@ -1037,6 +1037,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 60vh;
+    text-align: center;
 }
 
 .story-content {
@@ -1048,6 +1049,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .story-text {
@@ -1055,6 +1057,10 @@ body {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .story-text h2 {
@@ -1088,12 +1094,19 @@ body {
     margin-right: auto;
     padding-left: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .story-text ul li {
     margin-bottom: 0.8rem;
     position: relative;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .story-text ul li:before {
@@ -1101,6 +1114,7 @@ body {
     color: #EBEADE;
     font-weight: bold;
     margin-right: 0.5rem;
+    flex-shrink: 0;
 }
 
 .story-results {
@@ -1111,6 +1125,8 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    justify-items: center;
+    align-items: center;
 }
 
 .result-item {
@@ -1121,6 +1137,11 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .result-item:hover {
