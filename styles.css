@@ -176,6 +176,7 @@ body {
     gap: 4rem;
     align-items: center;
     justify-content: center;
+    min-height: 80vh;
 }
 
 .hero-content {
@@ -239,6 +240,13 @@ body {
     transform: translateY(-2px);
 }
 
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -247,6 +255,7 @@ body {
     padding: 2rem;
     border-radius: 15px;
     backdrop-filter: blur(10px);
+    align-self: center;
 }
 
 .stat {
@@ -3109,6 +3118,7 @@ html {
         gap: 2rem;
         padding: 0 20px;
         text-align: center;
+        min-height: 70vh;
     }
     
     .hero-content {
@@ -3138,6 +3148,7 @@ html {
     
     .hero-container {
         padding: 0 15px;
+        min-height: 60vh;
     }
     
     .hero-content {
