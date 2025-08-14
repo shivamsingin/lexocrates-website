@@ -1125,25 +1125,25 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     justify-items: center;
     align-items: center;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     place-items: center;
 }
 
 .contact-card {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(33, 46, 68, 0.1);
     border: 1px solid #EBEADE;
     transition: all 0.3s ease;
     text-align: center;
     width: 100%;
-    max-width: 350px;
+    max-width: 280px;
     margin: 0 auto;
 }
 
