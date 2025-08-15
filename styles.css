@@ -2587,6 +2587,111 @@ html {
     transform: translateY(-5px);
 }
 
+/* Who We Are */
+.who-we-are {
+    padding: 100px 0;
+    background: var(--off-white);
+}
+
+.who-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.who-text h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.who-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--deep-navy));
+    border-radius: 2px;
+}
+
+.who-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--charcoal-grey);
+    margin-bottom: 2rem;
+}
+
+.key-highlights {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(26, 35, 50, 0.1);
+    border: 1px solid var(--border-light);
+}
+
+.key-highlights h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--deep-navy);
+    margin-bottom: 1.5rem;
+}
+
+.key-highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.key-highlights li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--charcoal-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.key-highlights li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    color: var(--accent-blue);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.who-image {
+    text-align: center;
+}
+
+.who-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(26, 35, 50, 0.15);
+}
+
+@media (max-width: 768px) {
+    .who-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .who-text h2 {
+        font-size: 2.2rem;
+    }
+    
+    .key-highlights {
+        padding: 1.5rem;
+    }
+}
+
 /* Founder's Message */
 .founders-message {
     padding: 100px 0;
