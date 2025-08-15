@@ -194,6 +194,16 @@ body {
     padding: 0 10px;
 }
 
+.hero-content h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    line-height: 1.4;
+    padding: 0 10px;
+    color: #EBEADE;
+}
+
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
@@ -3512,6 +3522,12 @@ html {
         margin-bottom: 1.5rem;
     }
     
+    .hero-content h2 {
+        font-size: 1.5rem;
+        padding: 0 10px;
+        margin-bottom: 1.2rem;
+    }
+    
     .hero-content p {
         font-size: 1.1rem;
         padding: 0 10px;
@@ -3544,7 +3560,17 @@ html {
         margin-bottom: 1.2rem;
     }
     
+    .hero-content h2 {
+        font-size: 1.3rem;
+        padding: 0 5px;
+        margin-bottom: 1rem;
+    }
+    
     .hero-content p {
+        font-size: 1rem;
+        padding: 0 5px;
+        margin-top: 0;
+    }
         font-size: 1rem;
         padding: 0 5px;
         margin-top: 0;
