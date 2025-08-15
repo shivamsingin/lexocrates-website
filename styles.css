@@ -190,22 +190,23 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 80vh;
 }
 
 .hero-content {
     padding: 0 20px;
+    text-align: left;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.1;
     padding: 0 10px;
     text-align: center;
-    max-width: 800px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -218,7 +219,7 @@ body {
     line-height: 1.5;
     padding: 0 10px;
     color: var(--text-light);
-    text-align: justify;
+    text-align: left;
     word-spacing: 0.5px;
     hyphens: auto;
     max-width: 100%;
@@ -230,7 +231,7 @@ body {
     opacity: 0.9;
     line-height: 1.7;
     padding: 0 10px;
-    text-align: justify;
+    text-align: left;
     word-spacing: 0.3px;
     hyphens: auto;
     max-width: 100%;
