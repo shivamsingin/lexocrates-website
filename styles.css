@@ -4763,14 +4763,18 @@ html {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--deep-navy) 0%, var(--accent-blue) 100%);
     color: white;
-    text-align: center;
+    text-align: center !important;
+}
+
+.contact-cta .container {
+    text-align: center !important;
 }
 
 .contact-cta .cta-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    text-align: center;
+    text-align: center !important;
 }
 
 .contact-cta .cta-content h2 {
