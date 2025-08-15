@@ -2576,6 +2576,90 @@ html {
     transform: translateY(-5px);
 }
 
+/* Founder's Message */
+.founders-message {
+    padding: 100px 0;
+    background: white;
+}
+
+.founder-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.founder-text h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.founder-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--deep-navy));
+    border-radius: 2px;
+}
+
+.founder-quote {
+    background: linear-gradient(135deg, #f8f9fa 0%, var(--off-white) 100%);
+    padding: 3.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(26, 35, 50, 0.1);
+    border: 1px solid var(--border-light);
+    position: relative;
+    text-align: left;
+}
+
+.founder-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    font-size: 4rem;
+    color: var(--accent-blue);
+    font-family: serif;
+    opacity: 0.3;
+}
+
+.founder-quote p {
+    color: var(--charcoal-grey);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.founder-signature {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-light);
+    text-align: right;
+}
+
+.founder-signature p {
+    margin-bottom: 0.5rem;
+}
+
+.founder-signature strong {
+    color: var(--deep-navy);
+    font-size: 1.2rem;
+}
+
+.founder-signature span {
+    color: var(--accent-blue);
+    font-size: 1rem;
+    font-style: italic;
+}
+
 /* Mission & Vision */
 .mission-vision {
     padding: 100px 0;
@@ -3713,6 +3797,34 @@ html {
     .industry-card {
         max-width: 100%;
         padding: 2rem;
+    }
+    
+    .founder-content {
+        padding: 0 20px;
+    }
+    
+    .founder-text h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .founder-quote {
+        padding: 2.5rem 2rem;
+    }
+    
+    .founder-quote::before {
+        font-size: 3rem;
+        top: -15px;
+        left: 20px;
+    }
+    
+    .founder-quote p {
+        font-size: 1rem;
+    }
+    
+    .founder-signature {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
     }
     
     .industry-icon {
