@@ -281,19 +281,22 @@ body {
 .hero-image {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     height: 100%;
+    width: 100%;
 }
 
 .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     background: rgba(248, 249, 250, 0.1);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     align-self: center;
+    max-width: 400px;
+    margin-right: 2rem;
 }
 
 .stat {
@@ -301,14 +304,14 @@ body {
 }
 
 .stat h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text-light);
     margin-bottom: 0.5rem;
 }
 
 .stat p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.8;
 }
 
