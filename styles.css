@@ -2590,7 +2590,7 @@ html {
 /* Who We Are */
 .who-we-are {
     padding: 120px 0;
-    background: linear-gradient(135deg, var(--off-white) 0%, #f0f2f5 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
     position: relative;
 }
 
@@ -2641,11 +2641,11 @@ html {
 }
 
 .key-highlights {
-    background: linear-gradient(135deg, white 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(26, 35, 50, 0.1);
-    border: 1px solid rgba(52, 152, 219, 0.1);
+    box-shadow: 0 20px 40px rgba(26, 35, 50, 0.15);
+    border: 2px solid rgba(52, 152, 219, 0.2);
     position: relative;
     overflow: hidden;
 }
