@@ -204,6 +204,10 @@ body {
     margin-bottom: 1.5rem;
     line-height: 1.2;
     padding: 0 10px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-content h2 {
