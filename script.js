@@ -210,42 +210,4 @@ document.querySelectorAll('.industry-card').forEach(card => {
     });
 });
 
-// Add CSS for mobile menu
-const style = document.createElement('style');
-style.textContent = `
-    @media (max-width: 768px) {
-        .nav-menu {
-            position: fixed;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: white;
-            flex-direction: column;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transform: translateY(-100%);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-menu.active {
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .nav-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        
-        .nav-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .nav-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
-    }
-`;
-document.head.appendChild(style);
+// Mobile menu styles are now in CSS file
