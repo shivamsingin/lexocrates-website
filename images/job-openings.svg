@@ -1,0 +1,118 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="jobsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#jobsGradient)" rx="15"/>
+  
+  <!-- Job cards -->
+  <g transform="translate(30, 30)">
+    <!-- Legal position -->
+    <rect x="0" y="0" width="80" height="60" fill="#3498db" opacity="0.8" rx="5"/>
+    <text x="40" y="15" font-family="Arial" font-size="10" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Legal</text>
+    <text x="40" y="25" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Researcher</text>
+    <rect x="5" y="30" width="70" height="2" fill="#ecf0f1" opacity="0.6" rx="1"/>
+    <text x="40" y="40" font-family="Arial" font-size="7" fill="#ecf0f1" opacity="0.7" text-anchor="middle">Full-time</text>
+    <text x="40" y="50" font-family="Arial" font-size="7" fill="#ecf0f1" opacity="0.7" text-anchor="middle">Remote</text>
+    
+    <!-- Apply button -->
+    <rect x="20" y="55" width="40" height="8" fill="#f39c12" opacity="0.8" rx="3"/>
+    <text x="40" y="61" font-family="Arial" font-size="6" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Apply</text>
+  </g>
+  
+  <g transform="translate(130, 30)">
+    <!-- Technology position -->
+    <rect x="0" y="0" width="80" height="60" fill="#e74c3c" opacity="0.8" rx="5"/>
+    <text x="40" y="15" font-family="Arial" font-size="10" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Tech</text>
+    <text x="40" y="25" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Developer</text>
+    <rect x="5" y="30" width="70" height="2" fill="#ecf0f1" opacity="0.6" rx="1"/>
+    <text x="40" y="40" font-family="Arial" font-size="7" fill="#ecf0f1" opacity="0.7" text-anchor="middle">Full-time</text>
+    <text x="40" y="50" font-family="Arial" font-size="7" fill="#ecf0f1" opacity="0.7" text-anchor="middle">Hybrid</text>
+    
+    <!-- Apply button -->
+    <rect x="20" y="55" width="40" height="8" fill="#f39c12" opacity="0.8" rx="3"/>
+    <text x="40" y="61" font-family="Arial" font-size="6" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Apply</text>
+  </g>
+  
+  <g transform="translate(230, 30)">
+    <!-- Operations position -->
+    <rect x="0" y="0" width="60" height="60" fill="#f39c12" opacity="0.8" rx="5"/>
+    <text x="30" y="15" font-family="Arial" font-size="9" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Ops</text>
+    <text x="30" y="25" font-family="Arial" font-size="7" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Manager</text>
+    <rect x="5" y="30" width="50" height="2" fill="#ecf0f1" opacity="0.6" rx="1"/>
+    <text x="30" y="40" font-family="Arial" font-size="6" fill="#ecf0f1" opacity="0.7" text-anchor="middle">Full-time</text>
+    <text x="30" y="50" font-family="Arial" font-size="6" fill="#ecf0f1" opacity="0.7" text-anchor="middle">On-site</text>
+    
+    <!-- Apply button -->
+    <rect x="15" y="55" width="30" height="8" fill="#f39c12" opacity="0.8" rx="3"/>
+    <text x="30" y="61" font-family="Arial" font-size="6" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Apply</text>
+  </g>
+  
+  <!-- Job filters -->
+  <g transform="translate(30, 110)">
+    <rect x="0" y="0" width="25" height="15" fill="#3498db" opacity="0.7" rx="7"/>
+    <text x="12.5" y="10" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">All</text>
+  </g>
+  
+  <g transform="translate(65, 110)">
+    <rect x="0" y="0" width="25" height="15" fill="#e74c3c" opacity="0.7" rx="7"/>
+    <text x="12.5" y="10" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Legal</text>
+  </g>
+  
+  <g transform="translate(100, 110)">
+    <rect x="0" y="0" width="25" height="15" fill="#f39c12" opacity="0.7" rx="7"/>
+    <text x="12.5" y="10" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Tech</text>
+  </g>
+  
+  <g transform="translate(135, 110)">
+    <rect x="0" y="0" width="25" height="15" fill="#27ae60" opacity="0.7" rx="7"/>
+    <text x="12.5" y="10" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Ops</text>
+  </g>
+  
+  <!-- Career ladder -->
+  <g transform="translate(200, 110)">
+    <rect x="0" y="0" width="8" height="60" fill="#34495e" opacity="0.7"/>
+    <rect x="-15" y="10" width="38" height="6" fill="#16a085" opacity="0.8"/>
+    <rect x="-15" y="25" width="38" height="6" fill="#16a085" opacity="0.8"/>
+    <rect x="-15" y="40" width="38" height="6" fill="#16a085" opacity="0.8"/>
+    <rect x="-15" y="55" width="38" height="6" fill="#16a085" opacity="0.8"/>
+    
+    <!-- Person climbing -->
+    <g transform="translate(0, 45)">
+      <circle cx="0" cy="-8" r="6" fill="#ecf0f1" opacity="0.9"/>
+      <rect x="-3" y="0" width="6" height="12" fill="#ecf0f1" opacity="0.9" rx="3"/>
+    </g>
+  </g>
+  
+  <!-- Job search icon -->
+  <g transform="translate(30, 150)">
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#34495e" stroke-width="2" opacity="0.6"/>
+    <line x1="6" y1="6" x2="10" y2="10" stroke="#34495e" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Location indicators -->
+  <g transform="translate(60, 150)">
+    <circle cx="0" cy="0" r="8" fill="#e74c3c" opacity="0.7"/>
+    <text x="0" y="3" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">📍</text>
+  </g>
+  
+  <g transform="translate(80, 150)">
+    <circle cx="0" cy="0" r="8" fill="#3498db" opacity="0.7"/>
+    <text x="0" y="3" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">🏢</text>
+  </g>
+  
+  <g transform="translate(100, 150)">
+    <circle cx="0" cy="0" r="8" fill="#f39c12" opacity="0.7"/>
+    <text x="0" y="3" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">💻</text>
+  </g>
+  
+  <!-- Urgent hiring indicator -->
+  <g transform="translate(250, 150)">
+    <circle cx="0" cy="0" r="12" fill="#e74c3c" opacity="0.8"/>
+    <text x="0" y="4" font-family="Arial" font-size="12" fill="#ecf0f1" opacity="0.9" text-anchor="middle">!</text>
+  </g>
+</svg>

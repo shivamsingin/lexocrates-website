@@ -1,0 +1,97 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="statsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34495e;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#statsGradient)" rx="15"/>
+  
+  <!-- Stats grid -->
+  <g transform="translate(50, 40)">
+    <!-- 500+ Legal Professionals -->
+    <rect x="0" y="0" width="90" height="70" fill="#3498db" opacity="0.8" rx="8"/>
+    <text x="45" y="25" font-family="Arial" font-size="20" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">500+</text>
+    <text x="45" y="40" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Legal</text>
+    <text x="45" y="50" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Professionals</text>
+    
+    <!-- People icons -->
+    <g transform="translate(20, 55)">
+      <circle cx="0" cy="0" r="3" fill="#ecf0f1" opacity="0.9"/>
+      <circle cx="6" cy="0" r="3" fill="#ecf0f1" opacity="0.9"/>
+      <circle cx="12" cy="0" r="3" fill="#ecf0f1" opacity="0.9"/>
+    </g>
+  </g>
+  
+  <g transform="translate(160, 40)">
+    <!-- 25+ Jurisdictions -->
+    <rect x="0" y="0" width="90" height="70" fill="#e74c3c" opacity="0.8" rx="8"/>
+    <text x="45" y="25" font-family="Arial" font-size="20" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">25+</text>
+    <text x="45" y="40" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Jurisdictions</text>
+    <text x="45" y="50" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Global</text>
+    
+    <!-- Globe icon -->
+    <g transform="translate(45, 55)">
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#ecf0f1" stroke-width="1" opacity="0.9"/>
+      <line x1="-8" y1="0" x2="8" y2="0" stroke="#ecf0f1" stroke-width="1" opacity="0.9"/>
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#ecf0f1" stroke-width="1" opacity="0.9"/>
+    </g>
+  </g>
+  
+  <g transform="translate(50, 130)">
+    <!-- 15+ Years Experience -->
+    <rect x="0" y="0" width="90" height="70" fill="#f39c12" opacity="0.8" rx="8"/>
+    <text x="45" y="25" font-family="Arial" font-size="20" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">15+</text>
+    <text x="45" y="40" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Years</text>
+    <text x="45" y="50" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Experience</text>
+    
+    <!-- Clock icon -->
+    <g transform="translate(45, 55)">
+      <circle cx="0" cy="0" r="6" fill="none" stroke="#ecf0f1" stroke-width="1" opacity="0.9"/>
+      <line x1="0" y1="0" x2="0" y2="-4" stroke="#ecf0f1" stroke-width="1" opacity="0.9"/>
+      <line x1="0" y1="0" x2="3" y2="0" stroke="#ecf0f1" stroke-width="1" opacity="0.9"/>
+    </g>
+  </g>
+  
+  <g transform="translate(160, 130)">
+    <!-- 98% Client Satisfaction -->
+    <rect x="0" y="0" width="90" height="70" fill="#27ae60" opacity="0.8" rx="8"/>
+    <text x="45" y="25" font-family="Arial" font-size="20" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">98%</text>
+    <text x="45" y="40" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Client</text>
+    <text x="45" y="50" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.8" text-anchor="middle">Satisfaction</text>
+    
+    <!-- Star rating -->
+    <g transform="translate(45, 55)">
+      <polygon points="0,-4 1,-1 4,-1 1,1 0,4 -1,1 -4,-1 -1,-1" fill="#f39c12" opacity="0.9"/>
+    </g>
+  </g>
+  
+  <!-- Connection lines -->
+  <line x1="95" y1="75" x2="155" y2="75" stroke="#34495e" stroke-width="1" opacity="0.3"/>
+  <line x1="95" y1="165" x2="155" y2="165" stroke="#34495e" stroke-width="1" opacity="0.3"/>
+  <line x1="140" y1="110" x2="140" y2="155" stroke="#34495e" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="110" x2="200" y2="155" stroke="#34495e" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Achievement indicators -->
+  <g transform="translate(30, 30)">
+    <circle cx="0" cy="0" r="8" fill="#f39c12" opacity="0.7"/>
+    <path d="M-3,-1 L1,3 L5,-2" stroke="#ecf0f1" stroke-width="1" fill="none" opacity="0.9"/>
+  </g>
+  
+  <g transform="translate(30, 60)">
+    <circle cx="0" cy="0" r="8" fill="#f39c12" opacity="0.7"/>
+    <path d="M-3,-1 L1,3 L5,-2" stroke="#ecf0f1" stroke-width="1" fill="none" opacity="0.9"/>
+  </g>
+  
+  <g transform="translate(30, 90)">
+    <circle cx="0" cy="0" r="8" fill="#f39c12" opacity="0.7"/>
+    <path d="M-3,-1 L1,3 L5,-2" stroke="#ecf0f1" stroke-width="1" fill="none" opacity="0.9"/>
+  </g>
+  
+  <g transform="translate(30, 120)">
+    <circle cx="0" cy="0" r="8" fill="#f39c12" opacity="0.7"/>
+    <path d="M-3,-1 L1,3 L5,-2" stroke="#ecf0f1" stroke-width="1" fill="none" opacity="0.9"/>
+  </g>
+</svg>

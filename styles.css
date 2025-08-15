@@ -322,6 +322,19 @@ body {
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.section-header .header-content {
+    flex: 1;
+    text-align: left;
+}
+
+.section-header .header-image {
+    flex-shrink: 0;
 }
 
 .section-header h2 {
@@ -336,7 +349,6 @@ body {
     font-size: 1.1rem;
     color: var(--accent-blue);
     max-width: 700px;
-    margin: 0 auto;
     line-height: 1.6;
 }
 
@@ -4850,6 +4862,20 @@ html {
     .cta .cta-content p,
     .contact-cta .cta-content p {
         font-size: 1.1rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .section-header .header-content {
+        text-align: center;
+    }
+    
+    .section-header .header-image {
+        order: -1;
     }
 }
 
