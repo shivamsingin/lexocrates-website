@@ -2589,56 +2589,94 @@ html {
 
 /* Who We Are */
 .who-we-are {
-    padding: 100px 0;
-    background: var(--off-white);
+    padding: 120px 0;
+    background: linear-gradient(135deg, var(--off-white) 0%, #f0f2f5 100%);
+    position: relative;
+}
+
+.who-we-are::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
 }
 
 .who-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
 }
 
 .who-text h2 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    margin-bottom: 2.5rem;
+    position: relative;
+    line-height: 1.2;
+}
+
+.who-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--deep-navy));
+    border-radius: 3px;
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+}
+
+.who-text p {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--charcoal-grey);
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.key-highlights {
+    background: linear-gradient(135deg, white 0%, #f8f9fa 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(26, 35, 50, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.key-highlights::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--deep-navy));
+}
+
+.key-highlights h3 {
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--deep-navy);
     margin-bottom: 2rem;
     position: relative;
 }
 
-.who-text h2::after {
+.key-highlights h3::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -8px;
     left: 0;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(135deg, var(--accent-blue), var(--deep-navy));
+    width: 50px;
+    height: 3px;
+    background: var(--accent-blue);
     border-radius: 2px;
-}
-
-.who-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--charcoal-grey);
-    margin-bottom: 2rem;
-}
-
-.key-highlights {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(26, 35, 50, 0.1);
-    border: 1px solid var(--border-light);
-}
-
-.key-highlights h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--deep-navy);
-    margin-bottom: 1.5rem;
 }
 
 .key-highlights ul {
@@ -2647,34 +2685,70 @@ html {
 }
 
 .key-highlights li {
-    padding: 0.8rem 0;
-    padding-left: 2rem;
+    padding: 1rem 0;
+    padding-left: 3rem;
     position: relative;
     color: var(--charcoal-grey);
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.key-highlights li:hover {
+    color: var(--deep-navy);
+    transform: translateX(5px);
 }
 
 .key-highlights li::before {
     content: '✓';
     position: absolute;
     left: 0;
-    top: 0.8rem;
+    top: 1rem;
     color: var(--accent-blue);
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    background: rgba(52, 152, 219, 0.1);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
 }
 
 .who-image {
     text-align: center;
+    position: relative;
+}
+
+.who-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--deep-navy));
+    border-radius: 20px;
+    opacity: 0.1;
+    z-index: -1;
 }
 
 .who-image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(26, 35, 50, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(26, 35, 50, 0.2);
+    transition: all 0.3s ease;
+    border: 3px solid white;
+}
+
+.who-image img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 35px 70px rgba(26, 35, 50, 0.3);
 }
 
 @media (max-width: 768px) {
