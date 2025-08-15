@@ -85,10 +85,13 @@ body {
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .logo-link:hover {
     transform: scale(1.02);
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav-logo .logo-image {
