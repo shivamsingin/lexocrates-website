@@ -42,8 +42,8 @@
     <!-- Hero Section -->
     <section class="page-hero" style="background: linear-gradient(135deg, rgba(26, 35, 50, 0.9) 0%, rgba(44, 62, 80, 0.9) 100%), url('images/contact.jpg'); background-size: cover; background-position: center;">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Get in touch with our legal experts for consultation and support</p>
+            <h1>Let's Discuss Your Legal Support Needs</h1>
+            <p>Get in touch with our legal experts for consultation, support, and to explore how we can help transform your legal operations</p>
         </div>
     </section>
 
@@ -61,8 +61,8 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="method-content">
-                        <h3>Visit Our Office</h3>
-                        <p>123 Legal Street, Nariman Point<br>Mumbai, Maharashtra 400001<br>India</p>
+                        <h3>Our Offices</h3>
+                        <p><strong>India Office:</strong><br>123 Legal Street, Nariman Point<br>Mumbai, Maharashtra 400001<br><strong>Virtual Offices:</strong><br>US & UK Locations</p>
                         <a href="#office-location" class="btn btn-outline">View on Map</a>
                     </div>
                 </div>
@@ -73,8 +73,8 @@
                     </div>
                     <div class="method-content">
                         <h3>Call Us</h3>
-                        <p>Main: +91 22 1234 5678<br>Support: +91 22 1234 5679<br>Emergency: +91 98765 43210</p>
-                        <a href="tel:+912212345678" class="btn btn-outline">Call Now</a>
+                        <p>Main: +1 (555) 123-4567<br>Support: +1 (555) 123-4568<br>Emergency: +1 (555) 123-4569</p>
+                        <a href="tel:+15551234567" class="btn btn-outline">Call Now</a>
                     </div>
                 </div>
                 
@@ -86,6 +86,17 @@
                         <h3>Email Us</h3>
                         <p>General: info@lexocrates.com<br>Support: support@lexocrates.com<br>Sales: sales@lexocrates.com</p>
                         <a href="mailto:info@lexocrates.com" class="btn btn-outline">Send Email</a>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3>Connect on LinkedIn</h3>
+                        <p>Follow us for industry insights<br>and professional updates</p>
+                        <a href="#" class="btn btn-outline">Connect</a>
                     </div>
                 </div>
                 
@@ -136,22 +147,43 @@
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="company">Company Name</label>
-                                <input type="text" id="company" name="company">
+                                <label for="company">Firm/Company *</label>
+                                <input type="text" id="company" name="company" required>
                             </div>
                             <div class="form-group">
-                                <label for="industry">Industry</label>
-                                <select id="industry" name="industry">
-                                    <option value="">Select Industry</option>
-                                    <option value="financial-services">Financial Services</option>
-                                    <option value="technology">Technology</option>
-                                    <option value="manufacturing">Manufacturing</option>
-                                    <option value="healthcare">Healthcare</option>
-                                    <option value="retail">Retail</option>
-                                    <option value="education">Education</option>
+                                <label for="country">Country & Time Zone *</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="us">United States (EST/CST/MST/PST)</option>
+                                    <option value="uk">United Kingdom (GMT/BST)</option>
+                                    <option value="canada">Canada (EST/PST)</option>
+                                    <option value="australia">Australia (AEST/AWST)</option>
+                                    <option value="india">India (IST)</option>
+                                    <option value="singapore">Singapore (SGT)</option>
                                     <option value="other">Other</option>
                                 </select>
                             </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="services">Services Needed *</label>
+                            <select id="services" name="services" required>
+                                <option value="">Select Services</option>
+                                <option value="legal-research">Legal Research</option>
+                                <option value="contract-drafting">Contract Drafting</option>
+                                <option value="ediscovery">eDiscovery</option>
+                                <option value="litigation-support">Litigation Support</option>
+                                <option value="compliance">Compliance</option>
+                                <option value="ip-research">IP Research</option>
+                                <option value="ma-due-diligence">M&A Due Diligence</option>
+                                <option value="legal-transcription">Legal Transcription</option>
+                                <option value="legal-translation">Legal Translation</option>
+                                <option value="legal-data-entry">Legal Data Entry</option>
+                                <option value="virtual-paralegal">Virtual Paralegal</option>
+                                <option value="citation-formatting">Citation Formatting</option>
+                                <option value="multiple-services">Multiple Services</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
                         </div>
                         
                         <div class="form-group">
