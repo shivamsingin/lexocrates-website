@@ -1795,6 +1795,24 @@ body {
         align-items: stretch;
     }
     
+    .contact-card {
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    
     .services-grid {
         grid-template-columns: 1fr;
     }
@@ -1839,9 +1857,33 @@ body {
     
     .contact-card {
         padding: 2rem 1.5rem;
-        min-height: 200px;
+        min-height: 250px;
         width: 100%;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-details h4 {
+        margin-bottom: 0.5rem;
+        flex-shrink: 0;
+    }
+    
+    .contact-details p {
+        flex-grow: 1;
+        margin-bottom: 1rem;
     }
 }
 
