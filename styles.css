@@ -340,6 +340,126 @@ body {
     line-height: 1.6;
 }
 
+/* Technology & Tools Section */
+.technology-tools {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--off-white) 0%, #f0f8ff 100%);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.tool-category {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(26, 35, 50, 0.1);
+    border: 1px solid var(--border-light);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--deep-navy));
+}
+
+.tool-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(26, 35, 50, 0.15);
+}
+
+.tool-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--deep-navy));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+}
+
+.tool-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.tool-category h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--deep-navy);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.tool-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--accent-blue);
+    border-radius: 2px;
+}
+
+.tool-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.tool-item {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--deep-navy);
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+    background: var(--accent-blue);
+    color: white;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .tool-category {
+        padding: 2rem;
+    }
+    
+    .tool-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .tool-icon i {
+        font-size: 1.8rem;
+    }
+}
+
 /* Services Section */
 .services {
     padding: 80px 0;
