@@ -2759,10 +2759,10 @@ body {
 }
 
 .footer-logo .footer-logo-image {
-    height: 75px !important;
+    height: 60px !important;
     width: auto !important;
     max-width: none !important;
-    transform: scale(1.2) !important;
+    transform: scale(1.0) !important;
 }
 
 .footer-section h3,
