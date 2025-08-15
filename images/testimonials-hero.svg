@@ -1,0 +1,40 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="testimonialGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#testimonialGradient)" rx="20"/>
+  
+  <!-- Quote marks -->
+  <text x="80" y="120" font-family="serif" font-size="80" fill="#3498db" opacity="0.3">"</text>
+  <text x="320" y="200" font-family="serif" font-size="80" fill="#3498db" opacity="0.3">"</text>
+  
+  <!-- Client avatars -->
+  <circle cx="120" cy="80" r="25" fill="#3498db" opacity="0.8"/>
+  <circle cx="280" cy="80" r="25" fill="#2c3e50" opacity="0.8"/>
+  <circle cx="200" cy="220" r="25" fill="#e74c3c" opacity="0.8"/>
+  
+  <!-- Stars for ratings -->
+  <g fill="#f39c12">
+    <polygon points="50,60 52,65 57,65 53,68 55,73 50,70 45,73 47,68 43,65 48,65" opacity="0.8"/>
+    <polygon points="350,60 352,65 357,65 353,68 355,73 350,70 345,73 347,68 343,65 348,65" opacity="0.8"/>
+    <polygon points="200,180 202,185 207,185 203,188 205,193 200,190 195,193 197,188 193,185 198,185" opacity="0.8"/>
+  </g>
+  
+  <!-- Text lines representing testimonials -->
+  <rect x="60" y="140" width="120" height="4" fill="#3498db" opacity="0.6" rx="2"/>
+  <rect x="60" y="150" width="100" height="4" fill="#3498db" opacity="0.4" rx="2"/>
+  <rect x="60" y="160" width="80" height="4" fill="#3498db" opacity="0.3" rx="2"/>
+  
+  <rect x="220" y="140" width="120" height="4" fill="#2c3e50" opacity="0.6" rx="2"/>
+  <rect x="220" y="150" width="100" height="4" fill="#2c3e50" opacity="0.4" rx="2"/>
+  <rect x="220" y="160" width="80" height="4" fill="#2c3e50" opacity="0.3" rx="2"/>
+  
+  <rect x="140" y="260" width="120" height="4" fill="#e74c3c" opacity="0.6" rx="2"/>
+  <rect x="140" y="270" width="100" height="4" fill="#e74c3c" opacity="0.4" rx="2"/>
+  <rect x="140" y="280" width="80" height="4" fill="#e74c3c" opacity="0.3" rx="2"/>
+</svg>
