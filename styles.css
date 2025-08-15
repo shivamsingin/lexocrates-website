@@ -163,7 +163,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     color: white;
-    padding: 140px 0 80px;
+    padding: 180px 0 80px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -3448,7 +3448,7 @@ html {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 120px 0 60px;
+        padding: 160px 0 60px;
         min-height: 80vh;
     }
     
@@ -3483,7 +3483,7 @@ html {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 100px 0 40px;
+        padding: 140px 0 40px;
         min-height: 70vh;
     }
     
