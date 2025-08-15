@@ -4759,6 +4759,45 @@ html {
     text-align: center;
 }
 
+.contact-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--accent-blue) 100%);
+    color: white;
+    text-align: center;
+}
+
+.contact-cta .cta-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact-cta .cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-cta .cta-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.contact-cta .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .cta {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--deep-navy) 0%, var(--accent-blue) 100%);
@@ -4799,29 +4838,35 @@ html {
 
 /* Responsive Design for CTA */
 @media (max-width: 768px) {
-    .cta .cta-content h2 {
+    .cta .cta-content h2,
+    .contact-cta .cta-content h2 {
         font-size: 2rem;
     }
     
-    .cta .cta-content p {
+    .cta .cta-content p,
+    .contact-cta .cta-content p {
         font-size: 1.1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .cta {
+    .cta,
+    .contact-cta {
         padding: 60px 0;
     }
     
-    .cta .cta-content {
+    .cta .cta-content,
+    .contact-cta .cta-content {
         padding: 0 15px;
     }
     
-    .cta .cta-content h2 {
+    .cta .cta-content h2,
+    .contact-cta .cta-content h2 {
         font-size: 1.8rem;
     }
     
-    .cta .cta-content p {
+    .cta .cta-content p,
+    .contact-cta .cta-content p {
         font-size: 1rem;
     }
 }
