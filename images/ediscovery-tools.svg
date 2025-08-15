@@ -1,0 +1,86 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ediscoveryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#ediscoveryGradient)" rx="10"/>
+  
+  <!-- eDiscovery tools -->
+  <g transform="translate(200, 100)">
+    <!-- Document processing -->
+    <g transform="translate(-100, 0)">
+      <rect x="0" y="0" width="60" height="80" fill="#3498db" opacity="0.7" rx="5"/>
+      <rect x="5" y="5" width="50" height="3" fill="#ecf0f1" opacity="0.9" rx="1"/>
+      <rect x="5" y="12" width="45" height="3" fill="#ecf0f1" opacity="0.7" rx="1"/>
+      <rect x="5" y="19" width="50" height="3" fill="#ecf0f1" opacity="0.7" rx="1"/>
+      <rect x="5" y="26" width="40" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="33" width="45" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="40" width="35" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="47" width="40" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="54" width="30" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="61" width="35" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="68" width="25" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="75" width="30" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <text x="30" y="95" font-family="Arial" font-size="10" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Documents</text>
+    </g>
+    
+    <!-- Processing engine -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="35" fill="#f39c12" opacity="0.8"/>
+      <text x="0" y="5" font-family="Arial" font-size="12" fill="#34495e" opacity="0.8" text-anchor="middle">Process</text>
+      <text x="0" y="20" font-family="Arial" font-size="10" fill="#34495e" opacity="0.8" text-anchor="middle">Engine</text>
+    </g>
+    
+    <!-- Analysis results -->
+    <g transform="translate(100, 0)">
+      <rect x="0" y="0" width="60" height="80" fill="#27ae60" opacity="0.7" rx="5"/>
+      <rect x="5" y="5" width="50" height="3" fill="#ecf0f1" opacity="0.9" rx="1"/>
+      <rect x="5" y="12" width="45" height="3" fill="#ecf0f1" opacity="0.7" rx="1"/>
+      <rect x="5" y="19" width="50" height="3" fill="#ecf0f1" opacity="0.7" rx="1"/>
+      <rect x="5" y="26" width="40" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="33" width="45" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="40" width="35" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="47" width="40" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="54" width="30" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="61" width="35" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="68" width="25" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <rect x="5" y="75" width="30" height="3" fill="#ecf0f1" opacity="0.5" rx="1"/>
+      <text x="30" y="95" font-family="Arial" font-size="10" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Analysis</text>
+    </g>
+    
+    <!-- Connection arrows -->
+    <line x1="-60" y1="0" x2="-35" y2="0" stroke="#ecf0f1" stroke-width="3" opacity="0.8"/>
+    <polygon points="-35,0 -30,-5 -30,5" fill="#ecf0f1" opacity="0.8"/>
+    
+    <line x1="35" y1="0" x2="60" y2="0" stroke="#ecf0f1" stroke-width="3" opacity="0.8"/>
+    <polygon points="60,0 55,-5 55,5" fill="#ecf0f1" opacity="0.8"/>
+  </g>
+  
+  <!-- Tool features -->
+  <g transform="translate(50, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#3498db" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">OCR</text>
+  </g>
+  
+  <g transform="translate(130, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#f39c12" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Search</text>
+  </g>
+  
+  <g transform="translate(210, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#e74c3c" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Review</text>
+  </g>
+  
+  <g transform="translate(290, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#27ae60" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Export</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="220" font-family="Arial" font-size="14" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">eDiscovery Tools</text>
+</svg>

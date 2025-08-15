@@ -1,0 +1,76 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="qualityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a085;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#qualityGradient)" rx="10"/>
+  
+  <!-- Quality assurance process -->
+  <g transform="translate(200, 100)">
+    <!-- Input -->
+    <g transform="translate(-120, 0)">
+      <rect x="0" y="0" width="50" height="60" fill="#3498db" opacity="0.7" rx="5"/>
+      <text x="25" y="25" font-family="Arial" font-size="10" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Input</text>
+      <text x="25" y="40" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Work</text>
+    </g>
+    
+    <!-- QA Process -->
+    <g transform="translate(-40, 0)">
+      <circle cx="0" cy="0" r="30" fill="#f39c12" opacity="0.8"/>
+      <text x="0" y="5" font-family="Arial" font-size="10" fill="#34495e" opacity="0.8" text-anchor="middle">QA</text>
+      <text x="0" y="18" font-family="Arial" font-size="8" fill="#34495e" opacity="0.8" text-anchor="middle">Process</text>
+    </g>
+    
+    <!-- Review -->
+    <g transform="translate(40, 0)">
+      <circle cx="0" cy="0" r="30" fill="#e74c3c" opacity="0.8"/>
+      <text x="0" y="5" font-family="Arial" font-size="10" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Review</text>
+      <text x="0" y="18" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Check</text>
+    </g>
+    
+    <!-- Output -->
+    <g transform="translate(120, 0)">
+      <rect x="0" y="0" width="50" height="60" fill="#27ae60" opacity="0.7" rx="5"/>
+      <text x="25" y="25" font-family="Arial" font-size="10" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Quality</text>
+      <text x="25" y="40" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Output</text>
+    </g>
+    
+    <!-- Connection arrows -->
+    <line x1="-70" y1="0" x2="-40" y2="0" stroke="#ecf0f1" stroke-width="3" opacity="0.8"/>
+    <polygon points="-40,0 -35,-5 -35,5" fill="#ecf0f1" opacity="0.8"/>
+    
+    <line x1="-10" y1="0" x2="10" y2="0" stroke="#ecf0f1" stroke-width="3" opacity="0.8"/>
+    <polygon points="10,0 5,-5 5,5" fill="#ecf0f1" opacity="0.8"/>
+    
+    <line x1="70" y1="0" x2="40" y2="0" stroke="#ecf0f1" stroke-width="3" opacity="0.8"/>
+    <polygon points="40,0 35,-5 35,5" fill="#ecf0f1" opacity="0.8"/>
+  </g>
+  
+  <!-- Quality indicators -->
+  <g transform="translate(50, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#3498db" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Accuracy</text>
+  </g>
+  
+  <g transform="translate(130, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#f39c12" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Consistency</text>
+  </g>
+  
+  <g transform="translate(210, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#e74c3c" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Compliance</text>
+  </g>
+  
+  <g transform="translate(290, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#27ae60" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Excellence</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="220" font-family="Arial" font-size="14" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Quality Assurance</text>
+</svg>

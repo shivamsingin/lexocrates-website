@@ -1,0 +1,78 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="collaborationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#collaborationGradient)" rx="10"/>
+  
+  <!-- Team collaboration -->
+  <g transform="translate(200, 100)">
+    <!-- Central hub -->
+    <circle cx="0" cy="0" r="35" fill="#f39c12" opacity="0.8"/>
+    <text x="0" y="5" font-family="Arial" font-size="12" fill="#34495e" opacity="0.8" text-anchor="middle">Project</text>
+    <text x="0" y="20" font-family="Arial" font-size="10" fill="#34495e" opacity="0.8" text-anchor="middle">Hub</text>
+    
+    <!-- Team members -->
+    <g transform="translate(-100, -50)">
+      <circle cx="0" cy="0" r="20" fill="#e74c3c" opacity="0.7"/>
+      <circle cx="0" cy="-3" r="12" fill="#ecf0f1" opacity="0.9"/>
+      <rect x="-4" y="3" width="8" height="12" fill="#ecf0f1" opacity="0.9" rx="4"/>
+      <text x="0" y="35" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">In-House</text>
+    </g>
+    
+    <g transform="translate(100, -50)">
+      <circle cx="0" cy="0" r="20" fill="#27ae60" opacity="0.7"/>
+      <circle cx="0" cy="-3" r="12" fill="#ecf0f1" opacity="0.9"/>
+      <rect x="-4" y="3" width="8" height="12" fill="#ecf0f1" opacity="0.9" rx="4"/>
+      <text x="0" y="35" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Outsourced</text>
+    </g>
+    
+    <g transform="translate(-100, 50)">
+      <circle cx="0" cy="0" r="20" fill="#9b59b6" opacity="0.7"/>
+      <circle cx="0" cy="-3" r="12" fill="#ecf0f1" opacity="0.9"/>
+      <rect x="-4" y="3" width="8" height="12" fill="#ecf0f1" opacity="0.9" rx="4"/>
+      <text x="0" y="35" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Client</text>
+    </g>
+    
+    <g transform="translate(100, 50)">
+      <circle cx="0" cy="0" r="20" fill="#16a085" opacity="0.7"/>
+      <circle cx="0" cy="-3" r="12" fill="#ecf0f1" opacity="0.9"/>
+      <rect x="-4" y="3" width="8" height="12" fill="#ecf0f1" opacity="0.9" rx="4"/>
+      <text x="0" y="35" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Stakeholders</text>
+    </g>
+    
+    <!-- Connection lines -->
+    <line x1="-35" y1="-25" x2="-80" y2="-30" stroke="#ecf0f1" stroke-width="2" opacity="0.6"/>
+    <line x1="35" y1="-25" x2="80" y2="-30" stroke="#ecf0f1" stroke-width="2" opacity="0.6"/>
+    <line x1="-35" y1="25" x2="-80" y2="30" stroke="#ecf0f1" stroke-width="2" opacity="0.6"/>
+    <line x1="35" y1="25" x2="80" y2="30" stroke="#ecf0f1" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Collaboration tools -->
+  <g transform="translate(50, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#3498db" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Communication</text>
+  </g>
+  
+  <g transform="translate(130, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#f39c12" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Coordination</text>
+  </g>
+  
+  <g transform="translate(210, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#e74c3c" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Integration</text>
+  </g>
+  
+  <g transform="translate(290, 180)">
+    <rect x="0" y="0" width="70" height="20" fill="#27ae60" opacity="0.8" rx="3"/>
+    <text x="35" y="13" font-family="Arial" font-size="8" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Success</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="220" font-family="Arial" font-size="14" font-weight="bold" fill="#ecf0f1" opacity="0.9" text-anchor="middle">Team Collaboration</text>
+</svg>
