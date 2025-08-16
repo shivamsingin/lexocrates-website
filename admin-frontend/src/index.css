@@ -1,0 +1,206 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Custom styles */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500;
+  }
+  
+  .btn-success {
+    @apply btn bg-success-600 text-white hover:bg-success-700 focus:ring-success-500;
+  }
+  
+  .btn-warning {
+    @apply btn bg-warning-600 text-white hover:bg-warning-700 focus:ring-warning-500;
+  }
+  
+  .btn-danger {
+    @apply btn bg-danger-600 text-white hover:bg-danger-700 focus:ring-danger-500;
+  }
+  
+  .btn-outline {
+    @apply btn border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-primary-500;
+  }
+  
+  .input {
+    @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm;
+  }
+  
+  .textarea {
+    @apply input resize-none;
+  }
+  
+  .select {
+    @apply input;
+  }
+  
+  .card {
+    @apply bg-white overflow-hidden shadow rounded-lg;
+  }
+  
+  .card-header {
+    @apply px-4 py-5 sm:px-6 border-b border-gray-200;
+  }
+  
+  .card-body {
+    @apply px-4 py-5 sm:p-6;
+  }
+  
+  .card-footer {
+    @apply px-4 py-4 sm:px-6 bg-gray-50 border-t border-gray-200;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-success {
+    @apply badge bg-success-100 text-success-800;
+  }
+  
+  .badge-warning {
+    @apply badge bg-warning-100 text-warning-800;
+  }
+  
+  .badge-danger {
+    @apply badge bg-danger-100 text-danger-800;
+  }
+  
+  .badge-secondary {
+    @apply badge bg-secondary-100 text-secondary-800;
+  }
+  
+  .sidebar {
+    @apply fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out;
+  }
+  
+  .sidebar-open {
+    @apply translate-x-0;
+  }
+  
+  .sidebar-closed {
+    @apply -translate-x-full;
+  }
+  
+  .main-content {
+    @apply ml-0 transition-margin duration-300 ease-in-out;
+  }
+  
+  .main-content-sidebar-open {
+    @apply ml-64;
+  }
+  
+  .seo-score {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .seo-score-excellent {
+    @apply seo-score bg-success-100 text-success-800;
+  }
+  
+  .seo-score-good {
+    @apply seo-score bg-warning-100 text-warning-800;
+  }
+  
+  .seo-score-poor {
+    @apply seo-score bg-danger-100 text-danger-800;
+  }
+}
+
+/* React Quill Editor Styles */
+.ql-editor {
+  @apply min-h-[200px] text-gray-900;
+}
+
+.ql-toolbar {
+  @apply border-gray-300 rounded-t-md;
+}
+
+.ql-container {
+  @apply border-gray-300 rounded-b-md;
+}
+
+/* React Select Styles */
+.react-select__control {
+  @apply border-gray-300 shadow-sm;
+}
+
+.react-select__control--is-focused {
+  @apply border-primary-500 ring-1 ring-primary-500;
+}
+
+.react-select__menu {
+  @apply border border-gray-300 shadow-lg;
+}
+
+.react-select__option--is-focused {
+  @apply bg-primary-50;
+}
+
+.react-select__option--is-selected {
+  @apply bg-primary-600 text-white;
+}
+
+/* Dropzone Styles */
+.dropzone {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary-400 transition-colors duration-200;
+}
+
+.dropzone-active {
+  @apply border-primary-500 bg-primary-50;
+}
+
+/* Loading Spinner */
+.spinner {
+  @apply animate-spin rounded-full h-4 w-4 border-2 border-gray-300 border-t-primary-600;
+}
+
+/* Toast Styles */
+.toast {
+  @apply rounded-lg shadow-lg;
+}
+
+.toast-success {
+  @apply bg-success-500 text-white;
+}
+
+.toast-error {
+  @apply bg-danger-500 text-white;
+}
+
+.toast-warning {
+  @apply bg-warning-500 text-white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    @apply w-full;
+  }
+  
+  .main-content-sidebar-open {
+    @apply ml-0;
+  }
+}
