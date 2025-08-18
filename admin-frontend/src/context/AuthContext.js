@@ -82,10 +82,11 @@ export const AuthProvider = ({ children }) => {
         setAuthToken(state.token);
         try {
           const res = await axios.get('/api/auth/me');
+          const user = res.data.user || res.data.data || res.data?.success && res.data?.user;
           dispatch({
             type: 'AUTH_SUCCESS',
             payload: {
-              user: res.data.data,
+              user,
               token: state.token
             }
           });
@@ -106,7 +107,8 @@ export const AuthProvider = ({ children }) => {
     dispatch({ type: 'AUTH_START' });
     try {
       const res = await axios.post('/api/auth/login', { email, password });
-      const { user, token } = res.data.data;
+      const token = res.data.token || res.data.data?.token;
+      const user = res.data.user || res.data.data?.user;
       
       setAuthToken(token);
       dispatch({

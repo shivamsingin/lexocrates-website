@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { useForm, Controller } from 'react-hook-form';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -18,6 +19,8 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 const BlogEditor = ({ post, onSave, onCancel }) => {
+  const params = useParams();
+  const editingId = params?.id;
   const [isPreview, setIsPreview] = useState(false);
   const [seoAnalysis, setSeoAnalysis] = useState(null);
   const [uploadedImages, setUploadedImages] = useState([]);
@@ -35,18 +38,44 @@ const BlogEditor = ({ post, onSave, onCancel }) => {
     defaultValues: {
       title: post?.title || '',
       slug: post?.slug || '',
-      metaDescription: post?.metaDescription || '',
-      focusKeywords: post?.focusKeywords || [],
+      metaDescription: post?.metaDescription || post?.meta_description || '',
+      focusKeywords: post?.focusKeywords || post?.keywords || [],
       content: post?.content || '',
       excerpt: post?.excerpt || '',
       category: post?.category || '',
       tags: post?.tags || [],
       status: post?.status || 'draft',
-      schemaMarkup: post?.schemaMarkup || '',
-      internalLinks: post?.internalLinks || [],
-      externalLinks: post?.externalLinks || []
+      schemaMarkup: post?.schemaMarkup || post?.schema_markup || '',
+      internalLinks: post?.internalLinks || post?.internal_links || [],
+      externalLinks: post?.externalLinks || post?.external_links || []
     }
   });
+  // Load post when editing
+  useEffect(() => {
+    const fetchPost = async () => {
+      if (!editingId) return;
+      try {
+        const res = await axios.get(`/api/blog/${editingId}`);
+        const blog = res.data.blog || res.data.data || res.data;
+        if (!blog) return;
+        setValue('title', blog.title || '');
+        setValue('slug', blog.slug || '');
+        setValue('metaDescription', blog.meta_description || '');
+        const kw = Array.isArray(blog.keywords) ? blog.keywords : [];
+        setValue('focusKeywords', kw.map(k => ({ value: k, label: k })));
+        setValue('content', blog.content || '');
+        setValue('excerpt', blog.excerpt || '');
+        setValue('status', blog.status || 'draft');
+        setValue('schemaMarkup', blog.schema_markup || {});
+        setValue('internalLinks', blog.internal_links || []);
+        setValue('externalLinks', blog.external_links || []);
+        setUploadedImages((blog.images || []).map(img => ({ url: img.url || img, altText: img.altText || '' })));
+      } catch (e) {
+        // noop
+      }
+    };
+    fetchPost();
+  }, [editingId, setValue]);
 
   const watchedTitle = watch('title');
   const watchedMetaDescription = watch('metaDescription');
@@ -70,14 +99,14 @@ const BlogEditor = ({ post, onSave, onCancel }) => {
       const formData = watch();
       const response = await axios.post('/api/blog/analyze-seo', {
         title: formData.title,
-        metaDescription: formData.metaDescription,
-        focusKeywords: formData.focusKeywords,
+        meta_description: formData.metaDescription,
+        keywords: (formData.focusKeywords || []).map(k => typeof k === 'string' ? k : k?.value).filter(Boolean),
         content: formData.content,
         images: uploadedImages,
-        internalLinks: formData.internalLinks,
-        externalLinks: formData.externalLinks
+        internal_links: formData.internalLinks,
+        external_links: formData.externalLinks
       });
-      setSeoAnalysis(response.data.data);
+      setSeoAnalysis(response.data.analysis || response.data.data || response.data);
       toast.success('SEO analysis completed');
     } catch (error) {
       toast.error('Failed to analyze SEO');
@@ -115,13 +144,23 @@ const BlogEditor = ({ post, onSave, onCancel }) => {
     setIsSaving(true);
     try {
       const postData = {
-        ...data,
+        title: data.title,
+        content: data.content,
+        meta_description: data.metaDescription,
+        keywords: (data.focusKeywords || []).map(k => typeof k === 'string' ? k : k?.value).filter(Boolean),
+        excerpt: data.excerpt || '',
+        featured_image: uploadedImages?.[0]?.url || '',
         images: uploadedImages,
-        seoAnalysis
+        internal_links: data.internalLinks || [],
+        external_links: data.externalLinks || [],
+        schema_markup: data.schemaMarkup || {},
+        status: (data.status?.value || data.status || 'draft'),
+        categories: data.category ? [data.category?.value || data.category] : [],
+        tags: (data.tags || []).map(t => t?.value || t).filter(Boolean)
       };
 
-      if (post?._id) {
-        await axios.put(`/api/blog/${post._id}`, postData);
+      if (editingId) {
+        await axios.put(`/api/blog/${editingId}`, postData);
         toast.success('Post updated successfully');
       } else {
         await axios.post('/api/blog', postData);
@@ -263,6 +302,9 @@ const BlogEditor = ({ post, onSave, onCancel }) => {
                           placeholder="Add focus keywords..."
                           className="mt-1"
                           classNamePrefix="react-select"
+                          menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
+                          styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
+                          menuPosition="fixed"
                           noOptionsMessage={() => "Type to add keywords"}
                           onInputChange={(inputValue) => {
                             if (inputValue && !field.value.find(k => k.value === inputValue)) {
@@ -292,6 +334,9 @@ const BlogEditor = ({ post, onSave, onCancel }) => {
                             placeholder="Select category..."
                             className="mt-1"
                             classNamePrefix="react-select"
+                            menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
+                            styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
+                            menuPosition="fixed"
                           />
                         )}
                       />
@@ -314,6 +359,9 @@ const BlogEditor = ({ post, onSave, onCancel }) => {
                             placeholder="Select status..."
                             className="mt-1"
                             classNamePrefix="react-select"
+                            menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
+                            styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
+                            menuPosition="fixed"
                           />
                         )}
                       />

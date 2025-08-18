@@ -7,6 +7,8 @@ import Header from './components/Layout/Header';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import BlogList from './pages/BlogList';
+import Categories from './pages/Categories';
+import Tags from './pages/Tags';
 import BlogEditor from './components/Blog/BlogEditor';
 import Users from './pages/Users';
 import Settings from './pages/Settings';
@@ -80,6 +82,22 @@ const AppRoutes = () => {
         <ProtectedRoute>
           <MainLayout>
             <BlogEditor onSave={() => window.history.back()} onCancel={() => window.history.back()} />
+          </MainLayout>
+        </ProtectedRoute>
+      } />
+
+      <Route path="/categories" element={
+        <ProtectedRoute>
+          <MainLayout>
+            <Categories />
+          </MainLayout>
+        </ProtectedRoute>
+      } />
+
+      <Route path="/tags" element={
+        <ProtectedRoute>
+          <MainLayout>
+            <Tags />
           </MainLayout>
         </ProtectedRoute>
       } />
