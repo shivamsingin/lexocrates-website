@@ -23,9 +23,20 @@ const authMiddleware = require('../src/middleware/auth');
 // Initialize express
 const app = express();
 
+// Regional data storage configuration (US/UK/EU)
+// Set DATA_REGION and region-specific DB host/env to ensure data residency
+const DATA_REGION = (process.env.DATA_REGION || 'US').toUpperCase();
+const regionDbHostMap = {
+  US: process.env.DB_HOST_US,
+  UK: process.env.DB_HOST_UK,
+  EU: process.env.DB_HOST_EU
+};
+
+const resolvedDbHost = regionDbHostMap[DATA_REGION] || process.env.DB_HOST || 'localhost';
+
 // Connect to database
 const dbConfig = {
-  host: process.env.DB_HOST || 'localhost',
+  host: resolvedDbHost,
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
   database: process.env.DB_NAME || 'lexocrates_blog',
@@ -100,7 +111,8 @@ app.get('/api/health', async (req, res) => {
       message: 'Server is running',
       database: isConnected ? 'connected' : 'disconnected',
       timestamp: new Date().toISOString(),
-      environment: process.env.NODE_ENV || 'development'
+      environment: process.env.NODE_ENV || 'development',
+      dataRegion: DATA_REGION
     });
   } catch (error) {
     res.status(500).json({
