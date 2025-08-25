@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS users (
   password VARCHAR(255) NOT NULL,
   name VARCHAR(255) NOT NULL,
   role ENUM('admin', 'editor', 'author') DEFAULT 'author',
+  mfa_enabled TINYINT(1) DEFAULT 0,
+  mfa_secret VARCHAR(64) NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   INDEX idx_email (email),

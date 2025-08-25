@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
+const cookieParser = require('cookie-parser');
 const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
@@ -19,6 +20,7 @@ const seoAnalyzer = require('../src/utils/seoAnalyzer');
 
 // Import middleware
 const authMiddleware = require('../src/middleware/auth');
+const rbac = require('../src/middleware/rbac');
 
 // Initialize express
 const app = express();
@@ -70,6 +72,7 @@ app.use(cors({
 
 // Compression middleware
 app.use(compression());
+app.use(cookieParser());
 
 // Logging middleware
 if (process.env.NODE_ENV === 'development') {
@@ -127,7 +130,14 @@ app.get('/api/health', async (req, res) => {
 app.post('/api/auth/login', async (req, res) => {
   try {
     const result = await authHandler.login(req.body);
-    res.json(result);
+    // Set secure session cookie
+    res.cookie('session', result.token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'strict',
+      maxAge: 7 * 24 * 60 * 60 * 1000
+    });
+    res.json({ success: true, user: result.user });
   } catch (error) {
     res.status(400).json({
       success: false,
@@ -158,6 +168,32 @@ app.get('/api/auth/me', authMiddleware, async (req, res) => {
       message: error.message
     });
   }
+});
+
+// MFA setup routes
+app.post('/api/auth/mfa/setup', authMiddleware, async (req, res) => {
+  try {
+    const result = await authHandler.setupMfa(req.user.id);
+    res.json({ success: true, ...result });
+  } catch (error) {
+    res.status(400).json({ success: false, message: error.message });
+  }
+});
+
+app.post('/api/auth/mfa/verify', authMiddleware, async (req, res) => {
+  try {
+    const { token } = req.body || {};
+    const result = await authHandler.verifyMfa(req.user.id, token);
+    res.json({ success: true, ...result });
+  } catch (error) {
+    res.status(400).json({ success: false, message: error.message });
+  }
+});
+
+// Logout clears cookie
+app.post('/api/auth/logout', authMiddleware, (req, res) => {
+  res.clearCookie('session', { httpOnly: true, secure: true, sameSite: 'strict' });
+  res.json({ success: true });
 });
 
 // Blog routes (public)
@@ -214,7 +250,7 @@ app.get('/api/blog/:slug', async (req, res) => {
 });
 
 // Blog routes (protected - admin only)
-app.post('/api/blog', authMiddleware, async (req, res) => {
+app.post('/api/blog', authMiddleware, rbac(['admin','editor']), async (req, res) => {
   try {
     const result = await blogHandler.createBlog(req.body, req.user.id);
     res.json({
@@ -231,7 +267,7 @@ app.post('/api/blog', authMiddleware, async (req, res) => {
 });
 
 // Image upload endpoint
-app.post('/api/blog/upload-images', authMiddleware, upload.array('images'), async (req, res) => {
+app.post('/api/blog/upload-images', authMiddleware, rbac(['admin','editor']), upload.array('images'), async (req, res) => {
   try {
     const files = req.files || [];
     const images = files.map(f => ({ url: `/uploads/${f.filename}`, altText: '' }));
@@ -242,7 +278,7 @@ app.post('/api/blog/upload-images', authMiddleware, upload.array('images'), asyn
 });
 
 // On-demand SEO analysis (no DB write)
-app.post('/api/blog/analyze-seo', authMiddleware, async (req, res) => {
+app.post('/api/blog/analyze-seo', authMiddleware, rbac(['admin','editor','author']), async (req, res) => {
   try {
     const { title, content, meta_description, keywords = [] } = req.body || {};
     const analysis = await seoAnalyzer.analyzeContent({
@@ -257,7 +293,7 @@ app.post('/api/blog/analyze-seo', authMiddleware, async (req, res) => {
   }
 });
 
-app.put('/api/blog/:id', authMiddleware, async (req, res) => {
+app.put('/api/blog/:id', authMiddleware, rbac(['admin','editor']), async (req, res) => {
   try {
     const result = await blogHandler.updateBlog(parseInt(req.params.id), req.body, req.user.id);
     res.json({
@@ -273,7 +309,7 @@ app.put('/api/blog/:id', authMiddleware, async (req, res) => {
   }
 });
 
-app.delete('/api/blog/:id', authMiddleware, async (req, res) => {
+app.delete('/api/blog/:id', authMiddleware, rbac(['admin']), async (req, res) => {
   try {
     const result = await blogHandler.deleteBlog(parseInt(req.params.id));
     res.json({
@@ -344,7 +380,7 @@ app.get('/api/tags', async (req, res) => {
 });
 
 // Minimal create/delete for categories/tags
-app.post('/api/categories', authMiddleware, async (req, res) => {
+app.post('/api/categories', authMiddleware, rbac(['admin','editor']), async (req, res) => {
   const { name } = req.body || {};
   if (!name) return res.status(400).json({ success: false, message: 'Name is required' });
   try {
@@ -364,7 +400,7 @@ app.post('/api/categories', authMiddleware, async (req, res) => {
   }
 });
 
-app.delete('/api/categories/:id', authMiddleware, async (req, res) => {
+app.delete('/api/categories/:id', authMiddleware, rbac(['admin','editor']), async (req, res) => {
   try {
     await dbConnection.query('DELETE FROM categories WHERE id = ?', [parseInt(req.params.id)]);
     res.json({ success: true });
@@ -373,7 +409,7 @@ app.delete('/api/categories/:id', authMiddleware, async (req, res) => {
   }
 });
 
-app.post('/api/tags', authMiddleware, async (req, res) => {
+app.post('/api/tags', authMiddleware, rbac(['admin','editor']), async (req, res) => {
   const { name } = req.body || {};
   if (!name) return res.status(400).json({ success: false, message: 'Name is required' });
   try {
@@ -393,7 +429,7 @@ app.post('/api/tags', authMiddleware, async (req, res) => {
   }
 });
 
-app.delete('/api/tags/:id', authMiddleware, async (req, res) => {
+app.delete('/api/tags/:id', authMiddleware, rbac(['admin','editor']), async (req, res) => {
   try {
     await dbConnection.query('DELETE FROM tags WHERE id = ?', [parseInt(req.params.id)]);
     res.json({ success: true });

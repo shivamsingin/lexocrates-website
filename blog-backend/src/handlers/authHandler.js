@@ -7,7 +7,7 @@ class AuthHandler {
   }
 
   // Login user
-  async login({ email, password }) {
+  async login({ email, password, otp }) {
     if (!email || !password) {
       throw new Error('Email and password are required');
     }
@@ -26,6 +26,23 @@ class AuthHandler {
     const isValidPassword = await bcrypt.compare(password, user.password);
     if (!isValidPassword) {
       throw new Error('Invalid credentials');
+    }
+
+    // Enforce MFA if user has MFA enabled
+    if (user.mfa_enabled) {
+      const speakeasy = require('speakeasy');
+      if (!otp) {
+        throw new Error('MFA code required');
+      }
+      const verified = speakeasy.totp.verify({
+        secret: user.mfa_secret,
+        encoding: 'base32',
+        token: otp,
+        window: 1
+      });
+      if (!verified) {
+        throw new Error('Invalid MFA code');
+      }
     }
 
     // Generate JWT token
@@ -99,6 +116,25 @@ class AuthHandler {
       success: true,
       user
     };
+  }
+
+  // Setup MFA (TOTP)
+  async setupMfa(userId) {
+    const speakeasy = require('speakeasy');
+    const secret = speakeasy.generateSecret({ length: 20, name: 'Lexocrates' });
+    await this.db.query('UPDATE users SET mfa_secret = ?, mfa_enabled = 0 WHERE id = ?', [secret.base32, userId]);
+    return { otpauth_url: secret.otpauth_url, base32: secret.base32 };
+  }
+
+  // Verify MFA setup
+  async verifyMfa(userId, token) {
+    const speakeasy = require('speakeasy');
+    const [user] = await this.db.query('SELECT mfa_secret FROM users WHERE id = ?', [userId]);
+    if (!user?.mfa_secret) throw new Error('MFA not initialized');
+    const verified = speakeasy.totp.verify({ secret: user.mfa_secret, encoding: 'base32', token, window: 1 });
+    if (!verified) throw new Error('Invalid MFA code');
+    await this.db.query('UPDATE users SET mfa_enabled = 1 WHERE id = ?', [userId]);
+    return { success: true };
   }
 }
 
