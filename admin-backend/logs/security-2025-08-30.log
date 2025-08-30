@@ -1,0 +1,66 @@
+2025-08-30 14:26:39 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5001",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 16:16:16 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5001",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 16:18:57 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5001",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 16:20:09 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5001",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 16:52:25 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5001",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 17:33:45 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5001",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 17:38:37 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5003",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 17:39:11 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5001",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 23:37:24 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5003",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 23:42:55 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5003",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}
+2025-08-30 23:44:55 [INFO]: Server starting up {
+  "environment": "development",
+  "port": "5003",
+  "nodeVersion": "v22.17.0",
+  "platform": "darwin"
+}

@@ -11,27 +11,53 @@ const {
   getBlogStats,
   bulkUpdatePosts
 } = require('../controllers/blogController');
+const { 
+  RateLimiter, 
+  ValidationRules, 
+  InputSanitizer 
+} = require('../middleware/security');
 
 const router = express.Router();
 
 // All routes are protected
 router.use(protect);
 
-// Blog post routes
+// Blog post routes with enhanced security
 router.route('/')
   .get(getBlogPosts)
-  .post(upload.array('images', 10), createBlogPost);
+  .post(
+    RateLimiter.fileUpload(),
+    upload.array('images', 10), 
+    InputSanitizer.middleware(),
+    ValidationRules.blogPost(),
+    ValidationRules.handleValidationErrors,
+    createBlogPost
+  );
 
 router.route('/:id')
   .get(getBlogPost)
-  .put(upload.array('images', 10), updateBlogPost)
+  .put(
+    RateLimiter.fileUpload(),
+    upload.array('images', 10), 
+    InputSanitizer.middleware(),
+    ValidationRules.blogPost(),
+    ValidationRules.handleValidationErrors,
+    updateBlogPost
+  )
   .delete(deleteBlogPost);
 
 // SEO analysis route
-router.post('/analyze-seo', analyzeSEO);
+router.post('/analyze-seo', 
+  InputSanitizer.middleware(),
+  analyzeSEO
+);
 
 // Admin only routes
 router.get('/stats', authorize('admin'), getBlogStats);
-router.put('/bulk', authorize('admin'), bulkUpdatePosts);
+router.put('/bulk', 
+  authorize('admin'),
+  InputSanitizer.middleware(),
+  bulkUpdatePosts
+);
 
 module.exports = router;

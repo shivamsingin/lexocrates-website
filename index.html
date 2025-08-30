@@ -293,8 +293,8 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Phone Number</h4>
-                                <p>+91 22 1234 5678</p>
-                                <a href="tel:+912212345678" class="contact-link">Call Now</a>
+                                <p><a href="tel:+919414080184">+91 94140 80184</a></p>
+                                <a href="tel:+919414080184" class="contact-link">Call Now</a>
                             </div>
                         </div>
                         <div class="contact-card">
@@ -384,6 +384,14 @@
                     </ul>
                 </div>
                 <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="security-statement.html">Security Statement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
                     <h4>Newsletter</h4>
                     <p>Subscribe to our news and updates</p>
                     <form class="newsletter-form">
@@ -398,6 +406,41 @@
         </div>
     </footer>
 
+    <script src="blog-api.js"></script>
+    <script src="csrf-utils.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Load featured blog posts on homepage
+        document.addEventListener('DOMContentLoaded', async function() {
+            const blogSection = document.querySelector('.blog-section');
+            if (blogSection) {
+                const blogContainer = blogSection.querySelector('.blog-grid');
+                if (blogContainer) {
+                    try {
+                        const data = await blogAPI.getBlogs({ limit: 3 });
+                        if (data.blogs && data.blogs.length > 0) {
+                            blogContainer.innerHTML = data.blogs.map(blog => `
+                                <article class="blog-item">
+                                    <div class="blog-image">
+                                        <img src="${blog.featured_image || 'images/blog-default.jpg'}" alt="${blog.title}">
+                                    </div>
+                                    <div class="blog-content">
+                                        <h3><a href="/blog-post.html?slug=${blog.slug}">${blog.title}</a></h3>
+                                        <p>${blogDisplay.truncateText(blog.excerpt || blog.meta_description, 120)}</p>
+                                        <div class="blog-meta">
+                                            <span>${blogDisplay.formatDate(blog.created_at)}</span>
+                                            <span>By ${blog.author_name || 'Lexocrates Team'}</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            `).join('');
+                        }
+                    } catch (error) {
+                        console.error('Error loading blog posts:', error);
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

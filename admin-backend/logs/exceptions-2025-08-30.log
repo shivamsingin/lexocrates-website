@@ -1,0 +1,1518 @@
+2025-08-30 14:26:39 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 14:26:39 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 4928,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 186040320,
+      "heapTotal": 106528768,
+      "heapUsed": 75653504,
+      "external": 21681493,
+      "arrayBuffers": 18406179
+    }
+  },
+  "os": {
+    "loadavg": [
+      1.90625,
+      3.9248046875,
+      5.05859375
+    ],
+    "uptime": 228434
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 16:16:16 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 16:16:16 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 33523,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 186499072,
+      "heapTotal": 107970560,
+      "heapUsed": 84471624,
+      "external": 21706953,
+      "arrayBuffers": 18406355
+    }
+  },
+  "os": {
+    "loadavg": [
+      9.802734375,
+      4.482421875,
+      3.89794921875
+    ],
+    "uptime": 235011
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 16:18:57 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 16:18:57 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 39242,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 185352192,
+      "heapTotal": 107970560,
+      "heapUsed": 84470800,
+      "external": 21706953,
+      "arrayBuffers": 18406355
+    }
+  },
+  "os": {
+    "loadavg": [
+      4.232421875,
+      4.90478515625,
+      4.22021484375
+    ],
+    "uptime": 235172
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 16:20:09 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 16:20:09 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 42370,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 185729024,
+      "heapTotal": 107102208,
+      "heapUsed": 85974256,
+      "external": 21681493,
+      "arrayBuffers": 18406179
+    }
+  },
+  "os": {
+    "loadavg": [
+      2.64794921875,
+      4.29248046875,
+      4.041015625
+    ],
+    "uptime": 235244
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 16:52:25 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 16:52:25 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 91289,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 184254464,
+      "heapTotal": 106790912,
+      "heapUsed": 75634240,
+      "external": 21681493,
+      "arrayBuffers": 18406179
+    }
+  },
+  "os": {
+    "loadavg": [
+      2.373046875,
+      4.4921875,
+      4.9443359375
+    ],
+    "uptime": 237180
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 17:33:45 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 17:33:45 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 54833,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 186613760,
+      "heapTotal": 107528192,
+      "heapUsed": 76296944,
+      "external": 21681493,
+      "arrayBuffers": 18406179
+    }
+  },
+  "os": {
+    "loadavg": [
+      2.86474609375,
+      2.39990234375,
+      2.337890625
+    ],
+    "uptime": 239660
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 17:38:37 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 17:38:37 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 65029,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 189480960,
+      "heapTotal": 106790912,
+      "heapUsed": 75622976,
+      "external": 21681493,
+      "arrayBuffers": 18406179
+    }
+  },
+  "os": {
+    "loadavg": [
+      2.0673828125,
+      2.6181640625,
+      2.5244140625
+    ],
+    "uptime": 239952
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 17:39:11 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 17:39:11 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 66273,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 187023360,
+      "heapTotal": 107708416,
+      "heapUsed": 84378952,
+      "external": 21681493,
+      "arrayBuffers": 18406179
+    }
+  },
+  "os": {
+    "loadavg": [
+      2.212890625,
+      2.5947265625,
+      2.51806640625
+    ],
+    "uptime": 239986
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 23:37:24 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 23:37:24 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 83930,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 183189504,
+      "heapTotal": 108822528,
+      "heapUsed": 85515280,
+      "external": 21681493,
+      "arrayBuffers": 18406179
+    }
+  },
+  "os": {
+    "loadavg": [
+      1.640625,
+      2.04296875,
+      2.44677734375
+    ],
+    "uptime": 261479
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 23:42:55 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 23:42:55 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 96092,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 188268544,
+      "heapTotal": 106790912,
+      "heapUsed": 75625680,
+      "external": 21681493,
+      "arrayBuffers": 18406179
+    }
+  },
+  "os": {
+    "loadavg": [
+      2.20068359375,
+      2.41162109375,
+      2.52197265625
+    ],
+    "uptime": 261810
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}
+2025-08-30 23:44:55 [ERROR]: uncaughtException: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+Error: Cannot find module '../middleware/rateLimiter'
+Require stack:
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js
+- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ]
+  },
+  "stack": "Error: Cannot find module '../middleware/rateLimiter'\nRequire stack:\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js\n- /Users/shivamshekhawat/lexocrates-website/admin-backend/server.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js:6:25)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+  "exception": true,
+  "date": "Sat Aug 30 2025 23:44:55 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 192,
+    "uid": 501,
+    "gid": 20,
+    "cwd": "/Users/shivamshekhawat/lexocrates-website/admin-backend",
+    "execPath": "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+    "version": "v22.17.0",
+    "argv": [
+      "/Applications/ServBay/package/node/22/22.17.0/bin/node",
+      "/Users/shivamshekhawat/lexocrates-website/admin-backend/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 181436416,
+      "heapTotal": 107446272,
+      "heapUsed": 84403776,
+      "external": 21681493,
+      "arrayBuffers": 18406179
+    }
+  },
+  "os": {
+    "loadavg": [
+      2.03369140625,
+      2.35693359375,
+      2.4873046875
+    ],
+    "uptime": 261930
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1401,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1057,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1062,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1211,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 235,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1487,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/Users/shivamshekhawat/lexocrates-website/admin-backend/routes/audit.js",
+      "function": null,
+      "line": 6,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module._compile",
+      "line": 1730,
+      "method": "_compile",
+      "native": false
+    }
+  ]
+}

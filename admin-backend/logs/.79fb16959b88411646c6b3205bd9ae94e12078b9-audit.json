@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "/Users/shivamshekhawat/lexocrates-website/admin-backend/logs/.79fb16959b88411646c6b3205bd9ae94e12078b9-audit.json",
+    "files": [
+        {
+            "date": 1756544199941,
+            "name": "/Users/shivamshekhawat/lexocrates-website/admin-backend/logs/http-2025-08-30.log",
+            "hash": "b1dfc79dba1b9b696f081ea3bbb8af5b8971dab2ca4051ef73fffc57b40812cc"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -73,19 +73,25 @@ const contactForm = document.querySelector('.contact-form form');
 const newsletterForm = document.querySelector('.newsletter-form');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        
+        // Add CSRF token to form
+        if (window.csrfUtils) {
+            window.csrfUtils.addTokenToForm(this);
+        }
         
         // Get form data
         const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const company = this.querySelector('input[placeholder="Компания"]').value;
-        const service = this.querySelector('select').value;
-        const message = this.querySelector('textarea').value;
+        const firstName = this.querySelector('#firstName')?.value;
+        const lastName = this.querySelector('#lastName')?.value;
+        const email = this.querySelector('#email')?.value;
+        const company = this.querySelector('#company')?.value;
+        const services = this.querySelector('#services')?.value;
+        const message = this.querySelector('#message')?.value;
         
         // Simple validation
-        if (!name || !email || !service || !message) {
+        if (!firstName || !lastName || !email || !company || !services || !message) {
             alert('Please fill in all required fields');
             return;
         }
@@ -97,24 +103,63 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission
+        // CAPTCHA validation
+        if (window.captchaConfig && window.captchaConfig.isRequired()) {
+            const captchaToken = window.captchaConfig.getToken();
+            if (!captchaToken) {
+                alert('Please complete the CAPTCHA verification');
+                return;
+            }
+        }
+        
+        // Submit form with CSRF protection
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        setTimeout(() => {
-            alert('Thank you! Your message has been sent. We will contact you soon.');
-            this.reset();
+        try {
+            // Add CAPTCHA token to form data if required
+            if (window.captchaConfig && window.captchaConfig.isRequired()) {
+                const captchaToken = window.captchaConfig.getToken();
+                formData.append('captchaToken', captchaToken);
+            }
+            
+            const result = await window.csrfUtils.submitForm(this, '/api/contact/submit');
+            
+            if (result.success) {
+                alert('Thank you! Your message has been sent. We will contact you soon.');
+                this.reset();
+                if (window.captchaConfig) {
+                    window.captchaConfig.reset(); // Reset CAPTCHA after successful submission
+                }
+            } else {
+                alert('Failed to send message. Please try again.');
+                if (window.captchaConfig) {
+                    window.captchaConfig.reset(); // Reset CAPTCHA on error
+                }
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            alert('An error occurred. Please try again.');
+            if (window.captchaConfig) {
+                window.captchaConfig.reset(); // Reset CAPTCHA on error
+            }
+        } finally {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+        }
     });
 }
 
 if (newsletterForm) {
-    newsletterForm.addEventListener('submit', function(e) {
+    newsletterForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        
+        // Add CSRF token to form
+        if (window.csrfUtils) {
+            window.csrfUtils.addTokenToForm(this);
+        }
         
         const email = this.querySelector('input[type="email"]').value;
         
@@ -134,12 +179,22 @@ if (newsletterForm) {
         submitBtn.textContent = 'Subscribing...';
         submitBtn.disabled = true;
         
-        setTimeout(() => {
-            alert('Thank you for subscribing! You will receive our news and updates.');
-            this.reset();
+        try {
+            const result = await window.csrfUtils.submitJSON({ email }, '/api/newsletter/subscribe');
+            
+            if (result.success) {
+                alert('Thank you for subscribing! You will receive our news and updates.');
+                this.reset();
+            } else {
+                alert('Failed to subscribe. Please try again.');
+            }
+        } catch (error) {
+            console.error('Newsletter subscription error:', error);
+            alert('An error occurred. Please try again.');
+        } finally {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+        }
     });
 }
 
