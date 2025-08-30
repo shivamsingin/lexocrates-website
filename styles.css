@@ -1001,6 +1001,14 @@ body {
     color: white;
 }
 
+.team-stats .section-header h2 {
+    color: white;
+}
+
+.team-stats .section-header p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
