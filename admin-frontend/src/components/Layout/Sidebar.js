@@ -21,6 +21,7 @@ const Sidebar = ({ isOpen, onToggle }) => {
     { name: 'Blog Posts', href: '/blog', icon: FileText },
     { name: 'Categories', href: '/categories', icon: FileText },
     { name: 'Tags', href: '/tags', icon: FileText },
+    { name: 'Files', href: '/files', icon: FileText },
     { name: 'Users', href: '/users', icon: Users, adminOnly: true },
     { name: 'Analytics', href: '/analytics', icon: BarChart3, adminOnly: true },
     { name: 'Settings', href: '/settings', icon: Settings },

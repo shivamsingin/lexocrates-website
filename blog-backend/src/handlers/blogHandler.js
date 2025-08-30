@@ -3,112 +3,187 @@ const dbConnection = require('../db/connection');
 const seoAnalyzer = require('../utils/seoAnalyzer');
 
 class BlogHandler {
-  constructor(db) {
-    this.db = db;
+  constructor(dbConnection) {
+    this.db = dbConnection;
   }
 
-  // Get all blog posts with pagination and filtering
-  async getBlogs(options = {}) {
-    const {
-      page = 1,
-      limit = 10,
-      status = 'published',
-      search = null,
-      category = null,
-      tag = null,
-      author = null
-    } = options;
-
-    const offset = (page - 1) * limit;
-    const limitNum = Math.max(0, parseInt(limit) || 10);
-    const offsetNum = Math.max(0, parseInt(offset) || 0);
+  // Safe JSON parsing method
+  safeJsonParse(jsonString, defaultValue) {
+    if (!jsonString || jsonString === 'null' || jsonString === 'undefined') return defaultValue;
     
-    // Build WHERE clause
-    let whereClause = 'b.status = ?';
-    let params = [status];
+    // If it's already an object/array, return it
+    if (typeof jsonString === 'object') return jsonString;
     
-    // Add search filter
-    if (search && search.trim()) {
-      whereClause += ' AND (b.title LIKE ? OR b.content LIKE ? OR b.meta_description LIKE ?)';
-      const searchTerm = `%${search.trim()}%`;
-      params.push(searchTerm, searchTerm, searchTerm);
-    }
-    
-    // Category filter
-    if (category && category.trim()) {
-      whereClause += ' AND EXISTS (SELECT 1 FROM blog_categories bc JOIN categories c ON bc.category_id = c.id WHERE bc.blog_id = b.id AND c.slug = ?)';
-      params.push(category.trim());
-    }
-
-    // Tag filter
-    if (tag && tag.trim()) {
-      whereClause += ' AND EXISTS (SELECT 1 FROM blog_tags bt JOIN tags t ON bt.tag_id = t.id WHERE bt.blog_id = b.id AND t.slug = ?)';
-      params.push(tag.trim());
-    }
-
-    // Author filter
-    if (author && String(author).trim()) {
-      whereClause += ' AND b.author_id = ?';
-      params.push(author);
-    }
-
-    // Query with author join and filters (inline LIMIT/OFFSET to avoid prepared stmt limitations)
-    const sql = `SELECT b.id, b.title, b.slug, b.meta_description, b.status, b.created_at, b.updated_at, u.name as author_name, u.id as author_id FROM blogs b LEFT JOIN users u ON b.author_id = u.id WHERE ${whereClause} ORDER BY b.created_at DESC LIMIT ${limitNum} OFFSET ${offsetNum}`;
-    const blogs = await this.db.query(sql, params);
-    
-    // Get total count with same filters
-    const countSql = `SELECT COUNT(*) as total FROM blogs b WHERE ${whereClause}`;
-    const [{ total }] = await this.db.query(countSql, params);
-
-    return {
-      blogs: blogs.map(blog => ({
-        ...blog,
-        categories: [],
-        tags: []
-      })),
-      pagination: {
-        page: parseInt(page),
-        limit: parseInt(limit),
-        total,
-        pages: Math.ceil(total / limit)
+    // If it's a string that looks like JSON, try to parse it
+    if (typeof jsonString === 'string') {
+      try {
+        const parsed = JSON.parse(jsonString);
+        return parsed;
+      } catch (error) {
+        // If it's a comma-separated string, split it
+        if (jsonString.includes(',')) {
+          return jsonString.split(',').map(item => item.trim()).filter(item => item.length > 0);
+        }
+        // If it's a single item, return as array
+        if (jsonString.trim().length > 0) {
+          return [jsonString.trim()];
+        }
+        return defaultValue;
       }
-    };
+    }
+    
+    return defaultValue;
   }
 
-  // Get single blog post by slug
-  async getBlogBySlug(slug) {
-    const sql = `
-      SELECT 
-        b.*
-      FROM blogs b
-      WHERE b.slug = ? AND b.status = 'published'
-    `;
-
-    const [blog] = await this.db.query(sql, [slug]);
-    
-    if (!blog) {
-      return null;
+  async getBlogs(options = {}) {
+    try {
+      const { page = 1, limit = 10, category, tag, search } = options;
+      const offset = (page - 1) * limit;
+      
+      let sql = `
+        SELECT DISTINCT b.*, 
+               u.name as author_name,
+               GROUP_CONCAT(DISTINCT c.name) as categories,
+               GROUP_CONCAT(DISTINCT t.name) as tags
+        FROM blogs b
+        LEFT JOIN users u ON b.author_id = u.id
+        LEFT JOIN blog_categories bc ON b.id = bc.blog_id
+        LEFT JOIN categories c ON bc.category_id = c.id
+        LEFT JOIN blog_tags bt ON b.id = bt.blog_id
+        LEFT JOIN tags t ON bt.tag_id = t.id
+        WHERE b.status = "published"
+      `;
+      const params = [];
+      
+      if (category) {
+        sql += ' AND c.slug = ?';
+        params.push(category);
+      }
+      
+      if (tag) {
+        sql += ' AND t.slug = ?';
+        params.push(tag);
+      }
+      
+      if (search) {
+        sql += ' AND (b.title LIKE ? OR b.content LIKE ? OR b.excerpt LIKE ?)';
+        const searchTerm = `%${search}%`;
+        params.push(searchTerm, searchTerm, searchTerm);
+      }
+      
+      sql += ` GROUP BY b.id ORDER BY b.created_at DESC LIMIT ${parseInt(limit)} OFFSET ${parseInt(offset)}`;
+      
+      const blogs = await this.db.query(sql, params);
+      
+      // Process categories and tags for each blog
+      const processedBlogs = blogs.map(blog => ({
+        ...blog,
+        categories: blog.categories ? blog.categories.split(',').map(cat => cat.trim()).filter(cat => cat.length > 0) : [],
+        tags: blog.tags ? blog.tags.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0) : [],
+        keywords: this.safeJsonParse(blog.keywords, []),
+        images: this.safeJsonParse(blog.images, []),
+        internal_links: this.safeJsonParse(blog.internal_links, []),
+        external_links: this.safeJsonParse(blog.external_links, []),
+        schema_markup: this.safeJsonParse(blog.schema_markup, {})
+      }));
+      
+      // Get total count for pagination
+      let countSql = `
+        SELECT COUNT(DISTINCT b.id) as total
+        FROM blogs b
+        LEFT JOIN blog_categories bc ON b.id = bc.blog_id
+        LEFT JOIN categories c ON bc.category_id = c.id
+        LEFT JOIN blog_tags bt ON b.id = bt.blog_id
+        LEFT JOIN tags t ON bt.tag_id = t.id
+        WHERE b.status = "published"
+      `;
+      const countParams = [];
+      
+      if (category) {
+        countSql += ' AND c.slug = ?';
+        countParams.push(category);
+      }
+      
+      if (tag) {
+        countSql += ' AND t.slug = ?';
+        countParams.push(tag);
+      }
+      
+      if (search) {
+        countSql += ' AND (b.title LIKE ? OR b.content LIKE ? OR b.excerpt LIKE ?)';
+        const searchTerm = `%${search}%`;
+        countParams.push(searchTerm, searchTerm, searchTerm);
+      }
+      
+      const [countResult] = await this.db.query(countSql, countParams);
+      const total = countResult.total;
+      
+      return {
+        blogs: processedBlogs,
+        pagination: {
+          page,
+          limit,
+          total,
+          pages: Math.ceil(total / limit)
+        }
+      };
+    } catch (error) {
+      console.error('Error getting blogs:', error);
+      throw error;
     }
+  }
 
-    return {
-      ...blog,
-      categories: [],
-      tags: [],
-      keywords: JSON.parse(blog.keywords || '[]'),
-      images: JSON.parse(blog.images || '[]'),
-      internal_links: JSON.parse(blog.internal_links || '[]'),
-      external_links: JSON.parse(blog.external_links || '[]'),
-      schema_markup: JSON.parse(blog.schema_markup || '{}')
-    };
+  async getBlogBySlug(slug) {
+    try {
+      const sql = `
+        SELECT b.*, 
+               u.name as author_name,
+               GROUP_CONCAT(DISTINCT c.name) as categories,
+               GROUP_CONCAT(DISTINCT t.name) as tags
+        FROM blogs b
+        LEFT JOIN users u ON b.author_id = u.id
+        LEFT JOIN blog_categories bc ON b.id = bc.blog_id
+        LEFT JOIN categories c ON bc.category_id = c.id
+        LEFT JOIN blog_tags bt ON b.id = bt.blog_id
+        LEFT JOIN tags t ON bt.tag_id = t.id
+        WHERE b.slug = ? AND b.status = "published"
+        GROUP BY b.id
+      `;
+      const blogs = await this.db.query(sql, [slug]);
+      if (!blogs[0]) return null;
+      
+      const blog = blogs[0];
+      return {
+        ...blog,
+        categories: blog.categories ? blog.categories.split(',').map(cat => cat.trim()).filter(cat => cat.length > 0) : [],
+        tags: blog.tags ? blog.tags.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0) : [],
+        keywords: this.safeJsonParse(blog.keywords, []),
+        images: this.safeJsonParse(blog.images, []),
+        internal_links: this.safeJsonParse(blog.internal_links, []),
+        external_links: this.safeJsonParse(blog.external_links, []),
+        schema_markup: this.safeJsonParse(blog.schema_markup, {})
+      };
+    } catch (error) {
+      console.error('Error getting blog by slug:', error);
+      throw error;
+    }
   }
 
   // Get single blog post by id
   async getBlogById(id) {
     const sql = `
-      SELECT 
-        b.*
+      SELECT b.*, 
+             u.name as author_name,
+             GROUP_CONCAT(DISTINCT c.name) as categories,
+             GROUP_CONCAT(DISTINCT t.name) as tags
       FROM blogs b
+      LEFT JOIN users u ON b.author_id = u.id
+      LEFT JOIN blog_categories bc ON b.id = bc.blog_id
+      LEFT JOIN categories c ON bc.category_id = c.id
+      LEFT JOIN blog_tags bt ON b.id = bt.blog_id
+      LEFT JOIN tags t ON bt.tag_id = t.id
       WHERE b.id = ?
+      GROUP BY b.id
     `;
 
     const [blog] = await this.db.query(sql, [id]);
@@ -116,13 +191,13 @@ class BlogHandler {
 
     return {
       ...blog,
-      categories: [],
-      tags: [],
-      keywords: JSON.parse(blog.keywords || '[]'),
-      images: JSON.parse(blog.images || '[]'),
-      internal_links: JSON.parse(blog.internal_links || '[]'),
-      external_links: JSON.parse(blog.external_links || '[]'),
-      schema_markup: JSON.parse(blog.schema_markup || '{}')
+      categories: blog.categories ? blog.categories.split(',').map(cat => cat.trim()).filter(cat => cat.length > 0) : [],
+      tags: blog.tags ? blog.tags.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0) : [],
+      keywords: this.safeJsonParse(blog.keywords, []),
+      images: this.safeJsonParse(blog.images, []),
+      internal_links: this.safeJsonParse(blog.internal_links, []),
+      external_links: this.safeJsonParse(blog.external_links, []),
+      schema_markup: this.safeJsonParse(blog.schema_markup, {})
     };
   }
 

@@ -12,6 +12,7 @@ import Tags from './pages/Tags';
 import BlogEditor from './components/Blog/BlogEditor';
 import Users from './pages/Users';
 import Settings from './pages/Settings';
+import Files from './pages/Files';
 import './index.css';
 
 // Protected Route Component
@@ -106,6 +107,14 @@ const AppRoutes = () => {
         <ProtectedRoute>
           <MainLayout>
             <Users />
+          </MainLayout>
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/files" element={
+        <ProtectedRoute>
+          <MainLayout>
+            <Files />
           </MainLayout>
         </ProtectedRoute>
       } />
