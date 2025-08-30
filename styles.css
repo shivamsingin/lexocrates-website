@@ -1213,6 +1213,9 @@ body {
     box-shadow: 0 10px 25px rgba(26, 35, 50, 0.1);
     transition: all 0.3s ease;
     border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .job-card:hover {
@@ -1276,6 +1279,11 @@ body {
     border-radius: 10px;
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+.job-card .btn {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 /* Application Process */
