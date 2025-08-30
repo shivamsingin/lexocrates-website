@@ -57,6 +57,12 @@
                         <a href="contact.html" class="nav-link">Contact</a>
                     </li>
                 </ul>
+                <div class="nav-controls">
+                    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
                 <div class="nav-toggle">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -602,7 +608,177 @@
         </div>
     </footer>
 
+    <!-- Live Support Widget -->
+    <div id="supportWidget" class="support-widget">
+        <!-- Widget Toggle Button -->
+        <div class="widget-toggle" id="widgetToggle">
+            <i class="fas fa-comments"></i>
+            <span class="notification-badge" id="notificationBadge" style="display: none;">1</span>
+        </div>
+
+        <!-- Widget Container -->
+        <div class="widget-container" id="widgetContainer">
+            <!-- Widget Header -->
+            <div class="widget-header">
+                <div class="header-content">
+                    <div class="agent-info">
+                        <div class="agent-avatar">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="agent-details">
+                            <h4>Lexocrates Support</h4>
+                            <span class="status online">Online</span>
+                        </div>
+                    </div>
+                    <button class="close-widget" id="closeWidget">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Widget Body -->
+            <div class="widget-body">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-content">
+                        <div class="welcome-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>How can we help you?</h3>
+                        <p>Choose from our support options below</p>
+                        
+                        <div class="support-options">
+                            <button class="support-option" data-option="chat">
+                                <i class="fas fa-comments"></i>
+                                <span>Live Chat</span>
+                                <small>Talk to our experts</small>
+                            </button>
+                            <button class="support-option" data-option="bot">
+                                <i class="fas fa-robot"></i>
+                                <span>AI Assistant</span>
+                                <small>Quick answers</small>
+                            </button>
+                            <button class="support-option" data-option="ticket">
+                                <i class="fas fa-ticket-alt"></i>
+                                <span>Create Ticket</span>
+                                <small>Email support</small>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Interface -->
+                <div class="chat-interface" id="chatInterface" style="display: none;">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message agent-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Hello! Welcome to Lexocrates support. How can I assist you today?</p>
+                                <span class="message-time">Just now</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Type your message...">
+                        <button id="sendMessage">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bot Interface -->
+                <div class="bot-interface" id="botInterface" style="display: none;">
+                    <div class="chat-messages" id="botMessages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Hi! I'm Lexi, your AI assistant. I can help you with:</p>
+                                <ul class="bot-options">
+                                    <li>Service information</li>
+                                    <li>Pricing details</li>
+                                    <li>Process explanations</li>
+                                    <li>General inquiries</li>
+                                </ul>
+                                <span class="message-time">Just now</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="botInput" placeholder="Ask me anything...">
+                        <button id="sendBotMessage">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ticket Interface -->
+                <div class="ticket-interface" id="ticketInterface" style="display: none;">
+                    <div class="ticket-form">
+                        <h4>Create Support Ticket</h4>
+                        <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                        
+                        <form id="ticketForm">
+                            <div class="form-group">
+                                <label for="ticketName">Full Name *</label>
+                                <input type="text" id="ticketName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="ticketEmail">Email Address *</label>
+                                <input type="email" id="ticketEmail" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="ticketSubject">Subject *</label>
+                                <input type="text" id="ticketSubject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="ticketCategory">Category *</label>
+                                <select id="ticketCategory" required>
+                                    <option value="">Select Category</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="billing">Billing & Payment</option>
+                                    <option value="service">Service Information</option>
+                                    <option value="complaint">Complaint</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="ticketMessage">Message *</label>
+                                <textarea id="ticketMessage" rows="4" required placeholder="Please describe your issue in detail..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="ticketPriority">Priority</label>
+                                <select id="ticketPriority">
+                                    <option value="low">Low</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="high">High</option>
+                                    <option value="urgent">Urgent</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="submit-ticket">
+                                <i class="fas fa-paper-plane"></i>
+                                Submit Ticket
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="support-widget.js"></script>
 </body>
 </html>
 
