@@ -1208,7 +1208,7 @@ body {
 
 .job-card {
     background: white;
-    padding: 2rem;
+    padding: 2rem 2rem 2.5rem 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(26, 35, 50, 0.1);
     transition: all 0.3s ease;
