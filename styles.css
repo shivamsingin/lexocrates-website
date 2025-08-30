@@ -1226,8 +1226,9 @@ body {
 .job-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 1rem;
+    gap: 1rem;
 }
 
 .job-header h3 {
@@ -1235,6 +1236,8 @@ body {
     font-weight: 600;
     color: var(--deep-navy);
     margin: 0;
+    flex: 1;
+    min-width: 0;
 }
 
 .job-type {
@@ -1244,6 +1247,10 @@ body {
     border-radius: 15px;
     font-size: 0.8rem;
     font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 80px;
+    text-align: center;
 }
 
 .job-details {
