@@ -350,4 +350,74 @@ document.querySelectorAll('.industry-card').forEach(card => {
     });
 });
 
+// Dark Mode Toggle Functionality
+class DarkModeManager {
+    constructor() {
+        this.theme = localStorage.getItem('theme') || 'light';
+        this.toggle = document.getElementById('darkModeToggle');
+        this.init();
+    }
+
+    init() {
+        // Set initial theme
+        this.setTheme(this.theme);
+        
+        // Add event listener to toggle button
+        if (this.toggle) {
+            this.toggle.addEventListener('click', () => {
+                this.toggleTheme();
+            });
+        }
+        
+        // Listen for system theme changes
+        this.watchSystemTheme();
+    }
+
+    setTheme(theme) {
+        this.theme = theme;
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        // Update toggle button state
+        if (this.toggle) {
+            this.toggle.setAttribute('aria-label', `Switch to ${theme === 'light' ? 'dark' : 'light'} mode`);
+        }
+    }
+
+    toggleTheme() {
+        const newTheme = this.theme === 'light' ? 'dark' : 'light';
+        this.setTheme(newTheme);
+        
+        // Add animation class
+        document.body.classList.add('theme-transitioning');
+        setTimeout(() => {
+            document.body.classList.remove('theme-transitioning');
+        }, 300);
+    }
+
+    watchSystemTheme() {
+        if (window.matchMedia) {
+            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Only auto-switch if user hasn't manually set a preference
+            if (!localStorage.getItem('theme')) {
+                const systemTheme = mediaQuery.matches ? 'dark' : 'light';
+                this.setTheme(systemTheme);
+            }
+            
+            // Listen for system theme changes
+            mediaQuery.addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    this.setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        }
+    }
+}
+
+// Initialize dark mode manager
+document.addEventListener('DOMContentLoaded', () => {
+    new DarkModeManager();
+});
+
 // Mobile menu styles are now in CSS file
