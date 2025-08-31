@@ -6702,6 +6702,29 @@ input:focus, textarea:focus, select:focus {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-height: 300px;
+    min-height: 200px;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-blue, #3498db) var(--bg-secondary, #f8f9fa);
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: var(--bg-secondary, #f8f9fa);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: var(--accent-blue, #3498db);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--deep-navy, #2c3e50);
 }
 
 .message {

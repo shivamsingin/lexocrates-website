@@ -159,7 +159,11 @@ class SupportWidget {
         `;
         
         messagesContainer.appendChild(messageDiv);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        
+        // Ensure scrolling works by adding a small delay
+        setTimeout(() => {
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }, 10);
         
         // Store in history
         if (interfaceType === 'chat') {
