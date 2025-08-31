@@ -7013,8 +7013,8 @@ input:focus, textarea:focus, select:focus {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--light-bg);
-    border-top: 1px solid var(--light-border);
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
     z-index: 10000;
     animation: slideInUp 0.5s ease-out;
@@ -7035,20 +7035,20 @@ input:focus, textarea:focus, select:focus {
 
 .cookie-consent-text h4 {
     margin: 0 0 0.5rem 0;
-    color: var(--light-text);
+    color: #1f2937;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
 .cookie-consent-text p {
     margin: 0 0 1rem 0;
-    color: var(--light-text-secondary);
+    color: #6b7280;
     font-size: 0.9rem;
     line-height: 1.5;
 }
 
 .cookie-consent-text a {
-    color: var(--primary-color);
+    color: #3b82f6;
     text-decoration: underline;
 }
 
@@ -7063,7 +7063,7 @@ input:focus, textarea:focus, select:focus {
     align-items: center;
     gap: 0.5rem;
     font-size: 0.85rem;
-    color: var(--light-text-secondary);
+    color: #6b7280;
     cursor: pointer;
 }
 
@@ -7089,33 +7089,33 @@ input:focus, textarea:focus, select:focus {
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: #3b82f6;
     color: white;
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
+    background: #2563eb;
     transform: translateY(-1px);
 }
 
 .btn-secondary {
-    background: var(--light-bg);
-    color: var(--light-text);
-    border: 1px solid var(--light-border);
+    background: #f9fafb;
+    color: #374151;
+    border: 1px solid #d1d5db;
 }
 
 .btn-secondary:hover {
-    background: var(--light-bg-hover);
+    background: #f3f4f6;
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
 }
 
 .btn-outline:hover {
-    background: var(--primary-color);
+    background: #3b82f6;
     color: white;
 }
 
@@ -7135,7 +7135,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .cookie-modal-content {
-    background: var(--light-bg);
+    background: #ffffff;
     border-radius: 12px;
     max-width: 600px;
     width: 90%;
@@ -7150,12 +7150,12 @@ input:focus, textarea:focus, select:focus {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    border-bottom: 1px solid var(--light-border);
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .cookie-modal-header h3 {
     margin: 0;
-    color: var(--light-text);
+    color: #1f2937;
     font-size: 1.3rem;
 }
 
@@ -7163,7 +7163,7 @@ input:focus, textarea:focus, select:focus {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: var(--light-text-secondary);
+    color: #6b7280;
     cursor: pointer;
     padding: 0;
     width: 30px;
@@ -7176,8 +7176,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 .close-modal:hover {
-    background: var(--light-bg-hover);
-    color: var(--light-text);
+    background: #f3f4f6;
+    color: #1f2937;
 }
 
 .cookie-modal-body {
@@ -7187,7 +7187,7 @@ input:focus, textarea:focus, select:focus {
 .cookie-category {
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--light-border);
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .cookie-category:last-child {
@@ -7197,24 +7197,24 @@ input:focus, textarea:focus, select:focus {
 
 .cookie-category h4 {
     margin: 0 0 0.5rem 0;
-    color: var(--light-text);
+    color: #1f2937;
     font-size: 1.1rem;
 }
 
 .cookie-category p {
     margin: 0 0 1rem 0;
-    color: var(--light-text-secondary);
+    color: #6b7280;
     font-size: 0.9rem;
     line-height: 1.5;
 }
 
 .cookie-details {
-    background: var(--light-bg-hover);
+    background: #f9fafb;
     padding: 1rem;
     border-radius: 6px;
     margin-bottom: 1rem;
     font-size: 0.85rem;
-    color: var(--light-text-secondary);
+    color: #6b7280;
     line-height: 1.6;
 }
 
@@ -7247,7 +7247,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .cookie-toggle input:checked + .toggle-slider {
-    background: var(--primary-color);
+    background: #3b82f6;
 }
 
 .cookie-toggle input:checked + .toggle-slider:before {
@@ -7260,14 +7260,14 @@ input:focus, textarea:focus, select:focus {
 
 .toggle-label {
     font-weight: 500;
-    color: var(--light-text);
+    color: #1f2937;
 }
 
 .cookie-modal-footer {
     display: flex;
     gap: 1rem;
     padding: 1.5rem;
-    border-top: 1px solid var(--light-border);
+    border-top: 1px solid #e5e7eb;
     justify-content: flex-end;
 }
 
