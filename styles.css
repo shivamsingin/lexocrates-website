@@ -434,6 +434,10 @@ body {
 
 .stat {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .stat h3 {
@@ -441,11 +445,14 @@ body {
     font-weight: 700;
     color: var(--text-light);
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .stat p {
     font-size: 0.8rem;
     opacity: 0.8;
+    text-align: center;
+    margin: 0;
 }
 
 /* Section Headers */
@@ -2878,6 +2885,20 @@ body {
 .dark .contact-link:hover {
     background: var(--deep-navy);
     color: white;
+}
+
+/* Dark mode styles for stats */
+.dark .hero-stats {
+    background: rgba(248, 249, 250, 0.15);
+    border: 1px solid rgba(248, 249, 250, 0.2);
+}
+
+.dark .stat h3 {
+    color: white !important;
+}
+
+.dark .stat p {
+    color: white !important;
 }
 
 .contact-item {
