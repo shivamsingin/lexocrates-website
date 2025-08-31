@@ -100,6 +100,59 @@
     --warning-color: #f59e0b;
 }
 
+/* Dark Mode Color Palette for .dark class */
+.dark {
+    --deep-navy: #0f1419;
+    --charcoal-grey: #1e293b;
+    --off-white: #1a1a1a;
+    --light-grey: #2d3748;
+    --accent-blue: #60a5fa;
+    --text-dark: #e2e8f0;
+    --text-light: #1a1a1a;
+    --border-light: #374151;
+    
+    /* Background Colors */
+    --bg-primary: #0f1419;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #2d3748;
+    --bg-primary-dark: #0f1419;
+    --bg-secondary-dark: #1a1a1a;
+    --bg-tertiary-dark: #2d3748;
+    
+    /* Text Colors */
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e1;
+    --text-muted: #9ca3af;
+    --text-primary-dark: #e2e8f0;
+    --text-secondary-dark: #cbd5e1;
+    --text-muted-dark: #9ca3af;
+    
+    /* Card and Component Colors */
+    --card-bg: #1e293b;
+    --card-border: #374151;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --border-dark: #374151;
+    
+    /* Form Colors */
+    --input-bg: #1e293b;
+    --input-border: #374151;
+    --input-focus: #60a5fa;
+    
+    /* Additional Colors for Components */
+    --header-bg: #1e293b;
+    --footer-bg: #0f1419;
+    --footer-text: #e2e8f0;
+    --button-primary: #60a5fa;
+    --button-primary-hover: #3b82f6;
+    --button-secondary: #6b7280;
+    --button-secondary-hover: #9ca3af;
+    --link-color: #60a5fa;
+    --link-hover: #3b82f6;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --warning-color: #f59e0b;
+}
+
 body {
     font-family: 'Open Sans', 'Roboto', sans-serif;
     line-height: 1.6;
@@ -5401,6 +5454,242 @@ html {
 .dark .btn-outline:hover {
     background: var(--accent-blue);
     color: white;
+}
+
+/* Dark mode styles for service cards */
+.dark .service-card {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dark .service-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-blue);
+}
+
+.dark .service-card h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .service-card p {
+    color: var(--text-secondary-dark);
+}
+
+.dark .service-card li {
+    color: var(--text-secondary-dark);
+}
+
+/* Dark mode styles for industry cards */
+.dark .industry-card {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dark .industry-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-blue);
+}
+
+.dark .industry-card h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .industry-card p {
+    color: var(--text-secondary-dark);
+}
+
+/* Dark mode styles for testimonial cards */
+.dark .testimonial-card {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.dark .testimonial-card:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.dark .testimonial-card h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .testimonial-card p {
+    color: var(--text-secondary-dark);
+}
+
+.dark .testimonial-card .testimonial-author {
+    color: var(--text-secondary-dark);
+}
+
+/* Dark mode styles for blog cards */
+.dark .blog-item {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dark .blog-item:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark .blog-item h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .blog-item h3 a {
+    color: var(--text-primary-dark);
+}
+
+.dark .blog-item p {
+    color: var(--text-secondary-dark);
+}
+
+.dark .blog-item .blog-meta {
+    color: var(--text-secondary-dark);
+}
+
+/* Dark mode styles for team member cards */
+.dark .team-member {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dark .team-member:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark .team-member h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .team-member p {
+    color: var(--text-secondary-dark);
+}
+
+.dark .team-member .position {
+    color: var(--accent-blue);
+}
+
+/* Dark mode styles for form inputs */
+.dark .form-group input,
+.dark .form-group select,
+.dark .form-group textarea {
+    background: var(--bg-secondary-dark);
+    border: 2px solid var(--border-dark);
+    color: var(--text-primary-dark);
+}
+
+.dark .form-group input:focus,
+.dark .form-group select:focus,
+.dark .form-group textarea:focus {
+    border-color: var(--accent-blue);
+    background: var(--bg-secondary-dark);
+}
+
+.dark .form-group input::placeholder,
+.dark .form-group textarea::placeholder {
+    color: var(--text-secondary-dark);
+}
+
+/* Dark mode styles for navigation */
+.dark .header {
+    background: rgba(26, 35, 50, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark .nav-menu a {
+    color: var(--text-primary-dark);
+}
+
+.dark .nav-menu a:hover,
+.dark .nav-menu a.active {
+    color: var(--accent-blue);
+}
+
+.dark .nav-menu a::after {
+    background: var(--accent-blue);
+}
+
+/* Dark mode styles for sections */
+.dark .services {
+    background: var(--bg-primary-dark);
+}
+
+.dark .industries {
+    background: var(--bg-secondary-dark);
+}
+
+.dark .about {
+    background: var(--bg-primary-dark);
+}
+
+.dark .testimonials-section {
+    background: var(--bg-secondary-dark);
+}
+
+.dark .team-section {
+    background: var(--bg-primary-dark);
+}
+
+.dark .blog-section {
+    background: var(--bg-secondary-dark);
+}
+
+.dark .careers-section {
+    background: var(--bg-primary-dark);
+}
+
+/* Dark mode styles for section headers */
+.dark .section-header h2 {
+    color: var(--text-primary-dark);
+}
+
+.dark .section-header p {
+    color: var(--text-secondary-dark);
+}
+
+/* Dark mode styles for general text elements */
+.dark body {
+    background: var(--bg-primary-dark);
+    color: var(--text-primary-dark);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: var(--text-primary-dark);
+}
+
+.dark p {
+    color: var(--text-secondary-dark);
+}
+
+.dark a {
+    color: var(--link-color);
+}
+
+.dark a:hover {
+    color: var(--link-hover);
+}
+
+/* Dark mode styles for buttons */
+.dark .btn-primary {
+    background: var(--button-primary);
+    color: white;
+}
+
+.dark .btn-primary:hover {
+    background: var(--button-primary-hover);
+}
+
+.dark .btn-secondary {
+    background: var(--button-secondary);
+    color: white;
+}
+
+.dark .btn-secondary:hover {
+    background: var(--button-secondary-hover);
 }
 
 /* Active Navigation */
