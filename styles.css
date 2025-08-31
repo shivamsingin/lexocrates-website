@@ -2934,8 +2934,8 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--deep-navy);
-    color: white;
+    background: var(--footer-bg);
+    color: var(--footer-text);
     padding: 60px 0 20px;
 }
 
@@ -2964,7 +2964,7 @@ body {
 }
 
 .footer-section p {
-    color: var(--light-grey);
+    color: var(--footer-text);
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -2978,7 +2978,7 @@ body {
 }
 
 .footer-section ul li a {
-    color: var(--light-grey);
+    color: var(--footer-text);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -3021,6 +3021,8 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 0.9rem;
+    background: var(--input-bg);
+    color: var(--text-primary);
 }
 
 .newsletter-form button {
@@ -3042,7 +3044,7 @@ body {
     border-top: 1px solid var(--accent-blue);
     padding-top: 2rem;
     text-align: center;
-    color: var(--off-white);
+    color: var(--footer-text);
 }
 
 /* Responsive Design */
@@ -6415,9 +6417,59 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Footer Dark Mode */
-.footer {
+[data-theme="dark"] .footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+[data-theme="dark"] .footer-section h3,
+[data-theme="dark"] .footer-section h4 {
+    color: var(--accent-blue);
+}
+
+[data-theme="dark"] .footer-section p {
+    color: var(--footer-text);
+}
+
+[data-theme="dark"] .footer-section ul li a {
+    color: var(--footer-text);
+}
+
+[data-theme="dark"] .footer-section ul li a:hover {
+    color: var(--accent-blue);
+}
+
+[data-theme="dark"] .footer-bottom {
+    color: var(--footer-text);
+    border-top: 1px solid var(--accent-blue);
+}
+
+[data-theme="dark"] .newsletter-form input {
+    background: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--input-border);
+}
+
+[data-theme="dark"] .newsletter-form input::placeholder {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .newsletter-form button {
+    background: var(--button-primary);
+    color: white;
+}
+
+[data-theme="dark"] .newsletter-form button:hover {
+    background: var(--button-primary-hover);
+}
+
+[data-theme="dark"] .social-links a {
+    background: var(--accent-blue);
+    color: white;
+}
+
+[data-theme="dark"] .social-links a:hover {
     background: var(--deep-navy);
-    color: var(--text-light);
 }
 
 /* Theme Transition Animation */
