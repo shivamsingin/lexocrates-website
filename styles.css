@@ -5692,6 +5692,243 @@ html {
     background: var(--button-secondary-hover);
 }
 
+/* Strategic Focus Section Styles */
+.strategic-focus {
+    padding: 100px 0;
+    background: var(--bg-secondary);
+}
+
+.strategy-content {
+    margin-top: 3rem;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.strategy-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(26, 35, 50, 0.1);
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+.strategy-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(26, 35, 50, 0.15);
+    border-color: var(--accent-blue);
+}
+
+.strategy-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--deep-navy));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.strategy-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.strategy-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.strategy-item ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.strategy-item li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.strategy-item li::before {
+    content: "•";
+    color: var(--accent-blue);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.opportunity-highlight {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(26, 35, 50, 0.05));
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-blue);
+    margin-top: 1rem;
+}
+
+.opportunity-highlight strong {
+    color: var(--accent-blue);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.opportunity-highlight ul {
+    margin: 0.5rem 0 0 0;
+}
+
+.opportunity-highlight li {
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+}
+
+.strategy-steps {
+    margin-top: 1rem;
+}
+
+.step {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 8px;
+}
+
+.step h4 {
+    color: var(--accent-blue);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.step p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.roadmap {
+    margin-top: 1rem;
+}
+
+.roadmap-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-blue);
+}
+
+.roadmap-item h4 {
+    color: var(--accent-blue);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.roadmap-item p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.strategy-summary {
+    background: linear-gradient(135deg, var(--accent-blue), var(--deep-navy));
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.summary-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.summary-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.strategy-summary h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.strategy-summary ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.strategy-summary li {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+}
+
+/* Dark mode styles for strategic focus */
+.dark .strategic-focus {
+    background: var(--bg-secondary-dark);
+}
+
+.dark .strategy-item {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.dark .strategy-item:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.dark .strategy-item h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .strategy-item li {
+    color: var(--text-secondary-dark);
+}
+
+.dark .opportunity-highlight {
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), rgba(30, 41, 59, 0.05));
+}
+
+.dark .step {
+    background: rgba(96, 165, 250, 0.05);
+}
+
+.dark .step h4 {
+    color: var(--accent-blue);
+}
+
+.dark .step p {
+    color: var(--text-secondary-dark);
+}
+
+.dark .roadmap-item {
+    background: rgba(96, 165, 250, 0.05);
+}
+
+.dark .roadmap-item h4 {
+    color: var(--accent-blue);
+}
+
+.dark .roadmap-item p {
+    color: var(--text-secondary-dark);
+}
+
 /* Active Navigation */
 .nav-menu a.active {
     color: #1a365d;
