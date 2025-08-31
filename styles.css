@@ -3841,7 +3841,7 @@ html {
 /* Company Story */
 .company-story {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, var(--off-white) 100%);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--off-white) 100%);
 }
 
 .story-content {
@@ -3893,7 +3893,7 @@ html {
 /* Who We Are */
 .who-we-are {
     padding: 120px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
     position: relative;
 }
 
@@ -3944,11 +3944,11 @@ html {
 }
 
 .key-highlights {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-tertiary) 100%);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(26, 35, 50, 0.15);
-    border: 2px solid rgba(52, 152, 219, 0.2);
+    box-shadow: 0 20px 40px var(--shadow-color);
+    border: 2px solid var(--accent-blue-transparent);
     position: relative;
     overflow: hidden;
 }
@@ -4072,7 +4072,7 @@ html {
 /* Founder's Message */
 .founders-message {
     padding: 100px 0;
-    background: white;
+    background: var(--bg-primary);
 }
 
 .founder-content {
@@ -4102,10 +4102,10 @@ html {
 }
 
 .founder-quote {
-    background: linear-gradient(135deg, #f8f9fa 0%, var(--off-white) 100%);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--off-white) 100%);
     padding: 3.5rem;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(26, 35, 50, 0.1);
+    box-shadow: 0 15px 35px var(--shadow-color);
     border: 1px solid var(--border-light);
     position: relative;
     text-align: left;
@@ -4156,7 +4156,7 @@ html {
 /* Mission & Vision */
 .mission-vision {
     padding: 100px 0;
-    background: white;
+    background: var(--bg-primary);
 }
 
 .mv-grid {
@@ -4166,12 +4166,12 @@ html {
 }
 
 .mv-card {
-    background: linear-gradient(135deg, #f8f9fa 0%, var(--off-white) 100%);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--off-white) 100%);
     padding: 3.5rem;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(26, 35, 50, 0.1);
-    border: 1px solid rgba(52, 152, 219, 0.2);
+    box-shadow: 0 15px 35px var(--shadow-color);
+    border: 1px solid var(--accent-blue-transparent);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -4229,7 +4229,7 @@ html {
 /* Core Values */
 .core-values {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, var(--off-white) 100%);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--off-white) 100%);
 }
 
 .values-grid {
@@ -4241,18 +4241,18 @@ html {
 .value-item {
     text-align: center;
     padding: 3rem 2rem;
-    background: white;
+    background: var(--card-bg);
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(26, 35, 50, 0.1);
-    border: 1px solid rgba(52, 152, 219, 0.1);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--accent-blue-transparent);
     transition: all 0.3s ease;
     position: relative;
 }
 
 .value-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(26, 35, 50, 0.15);
-    border-color: rgba(52, 152, 219, 0.3);
+    box-shadow: 0 20px 40px var(--shadow-color);
+    border-color: var(--accent-blue-transparent);
 }
 
 .value-icon {
@@ -4292,7 +4292,7 @@ html {
 /* Team Section */
 .team-section {
     padding: 100px 0;
-    background: white;
+    background: var(--bg-primary);
 }
 
 .team-grid {
@@ -7705,6 +7705,174 @@ input:focus, textarea:focus, select:focus {
     background: var(--warning-color);
     color: white;
     border: 1px solid var(--warning-color);
+}
+
+/* About Page Dark Mode Overrides */
+[data-theme="dark"] .company-story {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--off-white) 100%);
+}
+
+[data-theme="dark"] .who-we-are {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+[data-theme="dark"] .key-highlights {
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-tertiary) 100%);
+    box-shadow: 0 20px 40px var(--shadow-color);
+    border: 2px solid var(--accent-blue-transparent);
+}
+
+[data-theme="dark"] .key-highlights h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .key-highlights li {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .key-highlights li:hover {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .key-highlights li::before {
+    color: var(--accent-blue);
+    background: var(--accent-blue-transparent);
+    box-shadow: 0 2px 8px var(--accent-blue-transparent);
+}
+
+[data-theme="dark"] .founders-message {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .founder-quote {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--off-white) 100%);
+    box-shadow: 0 15px 35px var(--shadow-color);
+    border: 1px solid var(--border-light);
+}
+
+[data-theme="dark"] .founder-quote p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .founder-signature strong {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .founder-signature span {
+    color: var(--accent-blue);
+}
+
+[data-theme="dark"] .mission-vision {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .mv-card {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--off-white) 100%);
+    box-shadow: 0 15px 35px var(--shadow-color);
+    border: 1px solid var(--accent-blue-transparent);
+}
+
+[data-theme="dark"] .mv-card h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .mv-card p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .core-values {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--off-white) 100%);
+}
+
+[data-theme="dark"] .value-item {
+    background: var(--card-bg);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--accent-blue-transparent);
+}
+
+[data-theme="dark"] .value-item:hover {
+    box-shadow: 0 20px 40px var(--shadow-color);
+    border-color: var(--accent-blue-transparent);
+}
+
+[data-theme="dark"] .value-item h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .value-item p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .team-section {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .team-member {
+    background: var(--card-bg);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--card-border);
+}
+
+[data-theme="dark"] .team-member h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .team-member .position {
+    color: var(--accent-blue);
+}
+
+[data-theme="dark"] .team-member p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .team-member .member-credentials span {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .achievements {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .achievement-item {
+    background: var(--card-bg);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--card-border);
+}
+
+[data-theme="dark"] .certifications {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .certification-item {
+    background: var(--card-bg);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--card-border);
+}
+
+[data-theme="dark"] .certification-item h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .certification-item p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .why-choose-us {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .feature-item {
+    background: var(--card-bg);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--card-border);
+}
+
+[data-theme="dark"] .feature-item h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .feature-item p {
+    color: var(--text-secondary);
 }
 
 [data-theme="dark"] .cookie-modal-content {
