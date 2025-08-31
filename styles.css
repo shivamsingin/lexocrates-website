@@ -7652,6 +7652,28 @@ input:focus, textarea:focus, select:focus {
     background: var(--button-secondary-hover);
 }
 
+/* Hero Section Button Overrides for Dark Mode */
+[data-theme="dark"] .hero .btn-primary {
+    background: var(--accent-blue);
+    color: white !important;
+}
+
+[data-theme="dark"] .hero .btn-primary:hover {
+    background: var(--deep-navy);
+    color: white !important;
+}
+
+[data-theme="dark"] .hero .btn-secondary {
+    background: transparent;
+    color: white !important;
+    border: 2px solid white;
+}
+
+[data-theme="dark"] .hero .btn-secondary:hover {
+    background: white;
+    color: var(--deep-navy) !important;
+}
+
 [data-theme="dark"] .btn-outline {
     border: 1px solid var(--accent-blue);
     color: var(--accent-blue);
@@ -8128,15 +8150,15 @@ input:focus, textarea:focus, select:focus {
 }
 
 [data-theme="dark"] .hero-content h1 {
-    color: var(--text-light);
+    color: white !important;
 }
 
 [data-theme="dark"] .hero-content h2 {
-    color: var(--text-light);
+    color: white !important;
 }
 
 [data-theme="dark"] .hero-content p {
-    color: var(--text-light);
+    color: white !important;
 }
 
 [data-theme="dark"] .hero-stats {
@@ -8145,11 +8167,11 @@ input:focus, textarea:focus, select:focus {
 }
 
 [data-theme="dark"] .stat h3 {
-    color: var(--text-light);
+    color: white !important;
 }
 
 [data-theme="dark"] .stat p {
-    color: var(--text-light);
+    color: white !important;
 }
 
 [data-theme="dark"] .section-header h2 {
