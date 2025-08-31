@@ -2869,6 +2869,17 @@ body {
     transform: translateY(-2px);
 }
 
+/* Dark mode styles for contact links */
+.dark .contact-link {
+    background: var(--accent-blue);
+    color: white;
+}
+
+.dark .contact-link:hover {
+    background: var(--deep-navy);
+    color: white;
+}
+
 .contact-item {
     display: flex;
     align-items: flex-start;
@@ -2901,6 +2912,35 @@ body {
     height: fit-content;
     width: 100%;
     box-sizing: border-box;
+}
+
+.contact-form h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.contact-form p {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+/* Dark mode styles for contact form */
+.dark .contact-form {
+    background: linear-gradient(135deg, var(--bg-secondary-dark) 0%, var(--bg-primary-dark) 100%);
+    border: 1px solid var(--accent-blue-transparent);
+}
+
+.dark .contact-form h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .contact-form p {
+    color: var(--text-secondary-dark);
 }
 
 .form-group {
@@ -4783,6 +4823,26 @@ html {
     margin: 0;
 }
 
+/* Dark mode styles for feature items */
+.dark .feature-item {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark .feature-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-blue);
+}
+
+.dark .feature-item h4 {
+    color: var(--text-primary-dark);
+}
+
+.dark .feature-item p {
+    color: var(--text-secondary-dark);
+}
+
 /* Responsive Design for Feature List */
 @media (max-width: 1200px) {
     .feature-list {
@@ -4852,6 +4912,20 @@ html {
     box-shadow: 0 5px 15px rgba(26, 54, 93, 0.3);
 }
 
+/* Dark mode styles for emergency contact */
+.dark .emergency-contact {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+}
+
+.dark .emergency-contact h4 {
+    color: var(--text-primary-dark);
+}
+
+.dark .emergency-contact p {
+    color: var(--text-secondary-dark);
+}
+
 .contact-features .feature {
     display: flex;
     align-items: center;
@@ -4892,6 +4966,19 @@ html {
     text-decoration: none;
 }
 
+/* Dark mode styles for form labels */
+.dark .form-group label {
+    color: var(--text-primary-dark);
+}
+
+.dark .checkbox-label {
+    color: var(--text-secondary-dark);
+}
+
+.dark .checkbox-label a {
+    color: var(--accent-blue);
+}
+
 /* Office Location */
 .office-location {
     padding: 80px 0;
@@ -4926,6 +5013,23 @@ html {
 .location-info li {
     padding: 0.5rem 0;
     color: #4a5568;
+}
+
+/* Dark mode styles for office location */
+.dark .office-location {
+    background: var(--bg-secondary-dark);
+}
+
+.dark .location-info h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .location-info p {
+    color: var(--text-secondary-dark);
+}
+
+.dark .location-info li {
+    color: var(--text-secondary-dark);
 }
 
 .location-map {
@@ -4985,6 +5089,24 @@ html {
 .faq-item p {
     color: #718096;
     line-height: 1.6;
+}
+
+/* Dark mode styles for FAQ section */
+.dark .faq-section {
+    background: var(--bg-primary-dark);
+}
+
+.dark .faq-item {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+}
+
+.dark .faq-item h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .faq-item p {
+    color: var(--text-secondary-dark);
 }
 
 /* CTA Section */
