@@ -9,6 +9,11 @@
             "date": 1756544199939,
             "name": "/Users/shivamshekhawat/lexocrates-website/admin-backend/logs/error-2025-08-30.log",
             "hash": "d035f38da768efd42d3c4fd661cce55fd5178954ad9b55e46b67fc4d83404311"
+        },
+        {
+            "date": 1756624273111,
+            "name": "/Users/shivamshekhawat/lexocrates-website/admin-backend/logs/error-2025-08-31.log",
+            "hash": "f00df13a9a0b438a5f62e429bf30280a60ea7a031646f8b3746566db9466fc5e"
         }
     ],
     "hashType": "sha256"

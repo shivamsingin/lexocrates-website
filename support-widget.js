@@ -207,7 +207,7 @@ class SupportWidget {
             },
             'experience': {
                 keywords: ['experience', 'years', 'background', 'expertise', 'qualified'],
-                response: "Lexocrates has extensive experience in legal process outsourcing:\n\n• **Industry Experience:** 10+ years serving law firms and corporations\n• **Expert Team:** Qualified legal professionals with specialized expertise\n• **Global Reach:** Serving clients across US, UK, Canada, and Commonwealth nations\n• **Quality Standards:** ISO-certified processes and quality assurance\n• **Technology:** Advanced tools and secure infrastructure\n\nWe've successfully completed thousands of projects across various legal domains."
+                response: "Lexocrates has extensive experience in legal process outsourcing:\n\n• **Industry Experience:** 10+ years serving law firms and corporations\n• **Expert Team:** Qualified legal professionals with specialized expertise\n• **Global Reach:** Serving clients across Canada\n• **Quality Standards:** ISO-certified processes and quality assurance\n• **Technology:** Advanced tools and secure infrastructure\n\nWe've successfully completed thousands of projects across various legal domains."
             },
             'security': {
                 keywords: ['security', 'confidential', 'privacy', 'data protection', 'secure'],

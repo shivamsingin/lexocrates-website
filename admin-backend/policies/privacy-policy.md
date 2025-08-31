@@ -83,9 +83,9 @@ In the event of a merger, acquisition, or sale of assets, your information may b
 ## 6. Data Storage and Security
 
 ### 6.1 Data Storage Locations
-- **Primary Storage**: United States (AWS US East/West)
-- **Backup Storage**: United Kingdom (AWS EU-West)
-- **Processing**: United States, United Kingdom, European Union
+- **Primary Storage**: Canada (AWS Canada Central)
+- **Backup Storage**: Canada (AWS Canada Central)
+- **Processing**: Canada, European Union
 
 ### 6.2 Security Measures
 - **Encryption**: AES-256 encryption for data at rest and in transit
@@ -134,8 +134,7 @@ We transfer data internationally using:
 
 ### 8.2 Compliant Regions
 We store and process data only in compliant regions:
-- **United States** (with appropriate safeguards)
-- **United Kingdom** (post-Brexit adequacy)
+- **Canada** (with appropriate safeguards)
 - **European Union** (GDPR compliant)
 - **Canada** (adequacy decision)
 
@@ -229,7 +228,7 @@ This Privacy Policy complies with:
 - **CCPA** (California Consumer Privacy Act)
 - **LGPD** (Brazilian General Data Protection Law)
 - **PIPEDA** (Canadian Personal Information Protection and Electronic Documents Act)
-- **UK GDPR** (United Kingdom General Data Protection Regulation)
+- **Canadian Privacy Laws** (PIPEDA and provincial privacy laws)
 
 ## 17. Definitions
 

@@ -147,14 +147,14 @@ GET /api/compliance/data-storage
   "data": {
     "compliantRegions": [
       {
-        "region": "United States",
+        "region": "Canada",
         "status": "Compliant",
         "certifications": ["SOC 2 Type II", "ISO 27001"],
         "dataCenters": ["AWS US East", "AWS US West"],
         "legalFramework": "CCPA, State Privacy Laws"
       },
       {
-        "region": "United Kingdom",
+        "region": "Canada",
         "status": "Compliant",
         "certifications": ["UK GDPR", "ISO 27001"],
         "dataCenters": ["AWS EU-West"],
@@ -212,7 +212,7 @@ Authorization: Bearer <token>
   "success": true,
   "data": {
     "clientId": "CLIENT001",
-    "dataStorageRegion": "United States",
+    "dataStorageRegion": "Canada",
     "applicableRegulations": ["CCPA", "GDPR"],
     "dataProcessingAgreement": {
       "status": "Active",
@@ -399,10 +399,8 @@ const daysUntilExpiration = compliance.daysUntilDpaExpiration;
 ### Regional Compliance
 
 **Supported Regions:**
-- **United States**: CCPA, State Privacy Laws
-- **United Kingdom**: UK GDPR, Data Protection Act 2018
-- **European Union**: GDPR, ePrivacy Directive
 - **Canada**: PIPEDA, Provincial Privacy Laws
+- **European Union**: GDPR, ePrivacy Directive
 
 **Data Transfer Mechanisms:**
 - Standard Contractual Clauses (SCCs)

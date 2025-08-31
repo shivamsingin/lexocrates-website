@@ -263,7 +263,7 @@ This Cookie Policy complies with:
 - **GDPR** (General Data Protection Regulation)
 - **ePrivacy Directive** (Cookie Law)
 - **CCPA** (California Consumer Privacy Act)
-- **UK GDPR** (United Kingdom General Data Protection Regulation)
+- **Canadian Privacy Laws** (PIPEDA and provincial privacy laws)
 - **PECR** (Privacy and Electronic Communications Regulations)
 
 ## 12. Definitions

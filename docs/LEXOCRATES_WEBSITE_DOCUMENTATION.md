@@ -18,7 +18,7 @@
 
 ## 🏢 Project Overview
 
-**Lexocrates** is a comprehensive Legal Process Outsourcing (LPO) website that provides legal support services to law firms and corporations across the US, UK, Canada, and Commonwealth nations. The website serves as both a marketing platform and a client management system.
+**Lexocrates** is a comprehensive Legal Process Outsourcing (LPO) website that provides legal support services to law firms and corporations across Canada. The website serves as both a marketing platform and a client management system.
 
 ### 🌟 Key Highlights
 - **Industry:** Legal Process Outsourcing (LPO)

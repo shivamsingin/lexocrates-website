@@ -132,14 +132,14 @@ const getDataStorageCompliance = async (req, res) => {
     const complianceInfo = {
       compliantRegions: [
         {
-          region: 'United States',
+          region: 'Canada',
           status: 'Compliant',
           certifications: ['SOC 2 Type II', 'ISO 27001'],
           dataCenters: ['AWS US East', 'AWS US West'],
           legalFramework: 'CCPA, State Privacy Laws'
         },
         {
-          region: 'United Kingdom',
+          region: 'Canada',
           status: 'Compliant',
           certifications: ['UK GDPR', 'ISO 27001'],
           dataCenters: ['AWS EU-West'],
@@ -204,7 +204,7 @@ const getClientComplianceStatus = async (req, res) => {
     // This would typically query the database for client-specific compliance info
     const clientCompliance = {
       clientId,
-      dataStorageRegion: 'United States', // Based on client agreement
+              dataStorageRegion: 'Canada', // Based on client agreement
       applicableRegulations: ['CCPA', 'GDPR'],
       dataProcessingAgreement: {
         status: 'Active',

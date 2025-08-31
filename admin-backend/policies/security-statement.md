@@ -322,7 +322,7 @@ We classify data based on sensitivity:
 Lexocrates Security Team  
 123 Legal Street, Suite 100  
 New York, NY 10001  
-United States
+Canada
 
 ## 14. Updates and Maintenance
 
