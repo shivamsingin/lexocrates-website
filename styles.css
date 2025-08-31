@@ -5359,6 +5359,18 @@ html {
     color: white;
 }
 
+/* Dark mode styles for btn-outline */
+.dark .btn-outline {
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    background: transparent;
+}
+
+.dark .btn-outline:hover {
+    background: var(--accent-blue);
+    color: white;
+}
+
 /* Active Navigation */
 .nav-menu a.active {
     color: #1a365d;
