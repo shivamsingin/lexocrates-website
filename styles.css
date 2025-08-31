@@ -2125,8 +2125,8 @@ body {
 }
 
 .industry-features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 2rem;
     flex-grow: 1;
@@ -2142,9 +2142,7 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .industry-card:hover .feature-tag {
@@ -2172,7 +2170,6 @@ body {
 /* Responsive design for industry cards */
 @media (max-width: 768px) {
     .industry-features {
-        grid-template-columns: 1fr;
         gap: 0.4rem;
     }
     
