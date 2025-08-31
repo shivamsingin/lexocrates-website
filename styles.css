@@ -4659,6 +4659,25 @@ html {
     background: #f7fafc;
 }
 
+/* Dark mode styles for contact info section */
+.dark .contact-info-section {
+    background: var(--bg-secondary-dark);
+}
+
+.dark .contact-method {
+    background: var(--bg-secondary-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dark .contact-method h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .contact-method p {
+    color: var(--text-secondary-dark);
+}
+
 .contact-methods {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -4947,6 +4966,19 @@ html {
     color: var(--text-secondary-dark);
 }
 
+/* Ensure emergency contact button is visible in dark mode */
+.dark .emergency-contact .btn-secondary {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
+
+.dark .emergency-contact .btn-secondary:hover {
+    background: var(--deep-navy);
+    border-color: var(--deep-navy);
+    color: white;
+}
+
 .contact-features .feature {
     display: flex;
     align-items: center;
@@ -5038,7 +5070,7 @@ html {
 
 /* Dark mode styles for office location */
 .dark .office-location {
-    background: var(--bg-secondary-dark);
+    background: var(--bg-primary-dark);
 }
 
 .dark .location-info h3 {
@@ -5050,6 +5082,25 @@ html {
 }
 
 .dark .location-info li {
+    color: var(--text-secondary-dark);
+}
+
+.dark .location-info strong {
+    color: var(--text-primary-dark);
+}
+
+/* Dark mode styles for map placeholder */
+.dark .map-placeholder {
+    background: var(--bg-secondary-dark);
+    color: var(--text-secondary-dark);
+    border: 1px solid var(--border-dark);
+}
+
+.dark .map-placeholder h3 {
+    color: var(--text-primary-dark);
+}
+
+.dark .map-placeholder p {
     color: var(--text-secondary-dark);
 }
 
