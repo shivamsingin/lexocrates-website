@@ -240,6 +240,7 @@ body {
     width: auto !important;
     max-width: none !important;
     transform: scale(1.2) !important;
+    content: url('logo.svg');
 }
 
 .nav-logo span {
@@ -6470,6 +6471,15 @@ input:focus, textarea:focus, select:focus {
 
 [data-theme="dark"] .social-links a:hover {
     background: var(--deep-navy);
+}
+
+/* Logo Dark Mode Overrides */
+[data-theme="dark"] .nav-logo .logo-image {
+    content: url('logo-light.svg') !important;
+}
+
+[data-theme="dark"] .footer-logo .footer-logo-image {
+    content: url('logo.svg') !important;
 }
 
 /* Theme Transition Animation */
