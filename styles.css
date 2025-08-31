@@ -620,10 +620,16 @@ body {
     align-items: center;
     background: var(--off-white);
     transition: all 0.3s ease;
+    border-radius: 8px 8px 0 0;
 }
 
 .faq-question:hover {
     background: rgba(52, 152, 219, 0.05);
+}
+
+.faq-item.active .faq-question {
+    background: rgba(52, 152, 219, 0.1);
+    border-bottom: 1px solid rgba(52, 152, 219, 0.2);
 }
 
 .faq-question h3 {
@@ -644,14 +650,14 @@ body {
 
 .faq-answer {
     padding: 0 2rem;
-    max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    display: none;
 }
 
 .faq-item.active .faq-answer {
     padding: 0 2rem 1.5rem;
-    max-height: 200px;
+    display: block;
 }
 
 .faq-answer p {

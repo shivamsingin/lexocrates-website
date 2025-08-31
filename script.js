@@ -97,6 +97,39 @@ function showFormMessage(form, message, type = 'success') {
     }, 5000);
 }
 
+// FAQ Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-question i');
+        
+        // Initially hide all answers
+        answer.style.display = 'none';
+        
+        question.addEventListener('click', () => {
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherIcon = otherItem.querySelector('.faq-question i');
+                    otherAnswer.style.display = 'none';
+                    otherIcon.style.transform = 'rotate(0deg)';
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            const isOpen = answer.style.display === 'block';
+            answer.style.display = isOpen ? 'none' : 'block';
+            icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+            item.classList.toggle('active', !isOpen);
+        });
+    });
+});
+
 // Form submission handling
 const contactForm = document.querySelector('.contact-form form');
 const newsletterForm = document.querySelector('.newsletter-form');
