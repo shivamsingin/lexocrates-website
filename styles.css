@@ -1,3 +1,12 @@
+/* Global hero text overflow prevention */
+.hero-top-text h1,
+.hero-content h1 {
+    box-sizing: border-box;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+
 /* Narrow phone (≤380px, e.g., 360x740) – shrink hero text and add right padding */
 @media (max-width: 380px) {
     .hero { background-attachment: scroll; }
@@ -75,30 +84,36 @@
     .widget-container { right: 6px; width: 86vw; }
     .hero-buttons { flex-direction: column; gap: 0.5rem; }
 
-    /* Prevent hero heading cut-off */
-    .hero-content h1 {
-        font-size: 1.8rem;
-        line-height: 1.2;
-        padding: 0 4px;
-        max-width: 100%;
-        word-break: keep-all;          /* do not split words */
-        overflow-wrap: normal;         /* wrap only at normal breakpoints (spaces) */
-        hyphens: none;                 /* disable hyphenation */
-        text-align: center;
+    /* Prevent hero heading cut-off - comprehensive fix */
+    .hero-top-text { 
+        padding: 0 16px; 
+        box-sizing: border-box;
+        width: 100%;
     }
-    .hero-top-text { padding: 0 12px; }
     .hero-top-text h1 {
-        font-size: 1.6rem;
-        line-height: 1.2;
-        padding: 0 12px; /* extra breathing room to prevent right-edge clipping */
-        max-width: 100%;
-        word-break: keep-all;
-        overflow-wrap: normal;
-        hyphens: none;
-        text-align: center;
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        padding: 0 8px !important;
+        max-width: 100% !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
+        hyphens: none !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
     }
-    /* Also guard the secondary hero heading block */
-    .hero-content h1 { padding: 0 12px; }
+    .hero-content h1 {
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        padding: 0 8px !important;
+        max-width: 100% !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
+        hyphens: none !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+    }
 }
 /* Tablet header adjustments (e.g., iPad Air 820x1180) */
 @media (max-width: 1024px) {
@@ -108,7 +123,20 @@
     .nav-controls { display: flex; }
 
     /* Switch to hamburger menu to avoid overflow */
-    .nav-toggle { display: flex; z-index: 2001; }
+    .navbar { position: relative; }
+    .nav-toggle { display: flex !important; position: absolute; right: 24px; top: 50%; transform: translateY(-50%); z-index: 2001; }
+    .nav-controls { position: absolute; right: 64px; top: 50%; transform: translateY(-50%); z-index: 2000; }
+    
+    /* Ensure hero text doesn't get cut off on tablets */
+    .hero-top-text h1,
+    .hero-content h1 {
+        padding: 0 20px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
+        hyphens: none !important;
+    }
 
     /* Reuse mobile menu pattern for tablets to prevent items off-screen */
     .nav-menu {
