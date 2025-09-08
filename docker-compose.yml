@@ -1,0 +1,55 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: lexocrates_blog
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  admin-backend:
+    build:
+      context: ./admin-backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./admin-backend/.env
+    depends_on:
+      - mongo
+    ports:
+      - "5001:5001"
+
+  blog-backend:
+    build:
+      context: ./blog-backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./blog-backend/.env
+    depends_on:
+      - mysql
+    ports:
+      - "5002:5000"
+
+  admin-frontend:
+    build:
+      context: ./admin-frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - admin-backend
+      - blog-backend
+    ports:
+      - "3000:80"
+
+volumes:
+  mongo_data:
+  mysql_data:

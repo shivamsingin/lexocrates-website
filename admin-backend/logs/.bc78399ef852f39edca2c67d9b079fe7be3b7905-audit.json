@@ -14,6 +14,16 @@
             "date": 1756624273115,
             "name": "/Users/shivamshekhawat/lexocrates-website/admin-backend/logs/security-2025-08-31.log",
             "hash": "28e970d7752cfc10a8815a3969a094fb8bc5b37eb049060b614cc4905cff8cf2"
+        },
+        {
+            "date": 1756968454987,
+            "name": "/Users/shivamshekhawat/lexocrates-website/admin-backend/logs/security-2025-09-04.log",
+            "hash": "948c2662b24ac6567faa32e715068c022c0ed7b71263286d8ed2776ee185ed9c"
+        },
+        {
+            "date": 1757309365736,
+            "name": "/Users/shivamshekhawat/lexocrates-website/admin-backend/logs/security-2025-09-08.log",
+            "hash": "1f23ca0b90bf02683fd82855c665bd3b8841a9f80e75fcfb428c72be0c3c37f1"
         }
     ],
     "hashType": "sha256"

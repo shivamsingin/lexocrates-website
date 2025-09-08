@@ -31,7 +31,8 @@ const userSchema = new mongoose.Schema({
     enum: [
       'read_blog', 'write_blog', 'publish_blog', 'delete_blog',
       'manage_users', 'manage_settings', 'view_analytics',
-      'manage_content', 'manage_billing', 'view_reports'
+      'manage_content', 'manage_billing', 'view_reports',
+      'manage_files', 'view_file_stats', 'view_encryption_report', 'download_files'
     ]
   }],
   isActive: {

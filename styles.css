@@ -1,3 +1,210 @@
+/* Narrow phone (≤380px, e.g., 360x740) – shrink hero text and add right padding */
+@media (max-width: 380px) {
+    .hero { background-attachment: scroll; }
+    .hero-top-text, .hero-container { padding-left: 12px; padding-right: 20px; }
+    .hero-top-text h1,
+    .hero-content h1 {
+        font-size: 1.55rem;
+        line-height: 1.25;
+        text-align: center;
+        padding-left: 12px;
+        padding-right: 20px;
+        word-break: keep-all;
+        overflow-wrap: normal;
+        hyphens: none;
+        max-width: 100%;
+    }
+}
+/* Make hero headline smaller, centered, with extra right padding on small phones */
+@media (max-width: 430px) {
+    .hero-top-text h1,
+    .hero-content h1 {
+        font-size: 1.7rem;
+        line-height: 1.25;
+        text-align: center;
+        padding-left: 12px;
+        padding-right: 18px; /* extra right padding so text breathes */
+        max-width: 100%;
+        word-break: keep-all;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+}
+/* Very small phones (≤360px) – ensure hero headline never clips on right */
+@media (max-width: 360px) {
+    html, body { margin: 0; padding: 0; overflow-x: hidden; }
+    .container { padding: 0 14px; }
+    .hero-container { padding: 0 14px; }
+    .hero-top-text { padding: 0 16px; }
+    .hero-top-text h1,
+    .hero-content h1 {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        padding: 0 16px;
+        max-width: 100%;
+        word-break: keep-all;
+        overflow-wrap: normal;
+        hyphens: none;
+        text-align: center;
+    }
+}
+/* Ultra-narrow phones (e.g., 344x882) - prevent right-side clipping */
+@media (max-width: 400px) {
+    html, body { overflow-x: hidden; }
+    .header { overflow-x: clip; }
+    .container { padding: 0 10px; }
+    .hero-container { padding: 0 10px; }
+    .nav-container { padding: 0 10px; gap: 8px; }
+    .navbar { position: relative; }
+    .nav-toggle { display: flex; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 2001; width: 40px; height: 32px; align-items: center; justify-content: center; }
+    .nav-toggle span { width: 100%; height: 3px; background: var(--deep-navy); }
+    /* Place dark mode button to the left of hamburger with safe spacing */
+    .nav-controls {
+        display: flex;
+        position: absolute;
+        right: 56px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2000;
+    }
+    .dark-mode-toggle { margin: 0; padding: 6px; }
+    .nav-logo { flex: 0 1 auto; }
+    .logo-image { max-width: 140px; height: auto; }
+    img, svg, video, canvas { max-width: 100%; height: auto; }
+    .footer .footer-logo-image { max-width: 100%; height: auto; }
+    .widget-container { right: 6px; width: 86vw; }
+    .hero-buttons { flex-direction: column; gap: 0.5rem; }
+
+    /* Prevent hero heading cut-off */
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        padding: 0 4px;
+        max-width: 100%;
+        word-break: keep-all;          /* do not split words */
+        overflow-wrap: normal;         /* wrap only at normal breakpoints (spaces) */
+        hyphens: none;                 /* disable hyphenation */
+        text-align: center;
+    }
+    .hero-top-text { padding: 0 12px; }
+    .hero-top-text h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        padding: 0 12px; /* extra breathing room to prevent right-edge clipping */
+        max-width: 100%;
+        word-break: keep-all;
+        overflow-wrap: normal;
+        hyphens: none;
+        text-align: center;
+    }
+    /* Also guard the secondary hero heading block */
+    .hero-content h1 { padding: 0 12px; }
+}
+/* Tablet header adjustments (e.g., iPad Air 820x1180) */
+@media (max-width: 1024px) {
+    /* Increase container padding and spacing */
+    .nav-container { padding: 0 24px; gap: 16px; }
+    .nav-logo { flex: 0 0 auto; }
+    .nav-controls { display: flex; }
+
+    /* Switch to hamburger menu to avoid overflow */
+    .nav-toggle { display: flex; z-index: 2001; }
+
+    /* Reuse mobile menu pattern for tablets to prevent items off-screen */
+    .nav-menu {
+        position: fixed !important;
+        top: 80px !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: var(--off-white) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 2rem !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+        transform: translateY(-100%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.3s ease !important;
+        z-index: 999 !important;
+        height: auto !important;
+        max-height: calc(100vh - 80px) !important;
+        overflow-y: auto !important;
+        list-style: none !important;
+        margin: 0 !important;
+    }
+
+    .nav-menu.active { transform: translateY(0) !important; opacity: 1 !important; visibility: visible !important; }
+    .nav-menu li { margin: 1rem 0 !important; text-align: center !important; }
+    .nav-menu a { display: block !important; padding: 1rem !important; font-size: 1.2rem !important; color: var(--deep-navy) !important; text-decoration: none !important; border-bottom: 1px solid var(--border-light) !important; }
+    .nav-menu a:hover { background: var(--light-grey) !important; color: var(--accent-blue) !important; }
+}
+/* Prevent horizontal overflow on all devices */
+html { overflow-x: hidden; }
+
+/* Avoid background fixed issues causing horizontal scroll on mobile */
+@media (max-width: 768px) {
+    .hero { background-attachment: scroll; }
+}
+
+/* Mobile stacking and equal heights for contact cards; also reduce side padding */
+@media (max-width: 640px) {
+    .contact .container { padding: 0 12px; }
+    .contact-grid { grid-template-columns: 1fr !important; gap: 1rem; justify-items: stretch; }
+    .contact-card { width: 100%; min-height: 260px; height: auto; display: flex; flex-direction: column; justify-content: space-between; }
+    .contact-details { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .contact-details p { flex: 1; }
+    .contact-content img { width: 100%; height: auto; max-height: 220px; object-fit: cover; }
+    .contact-form { width: 100%; max-width: 100%; margin: 0; padding: 16px; }
+    .contact-form *, .contact * { box-sizing: border-box; max-width: 100%; }
+}
+/* Ensure hamburger button visibility on small phones (e.g., 360x740) */
+@media (max-width: 768px) {
+    .nav-controls { display: none; }
+    .nav-container { padding: 0 12px; }
+    .nav-toggle {
+        display: flex;
+        z-index: 2001;
+        width: 40px;
+        height: 32px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 12px;
+    }
+    .nav-toggle span { width: 100%; height: 3px; background: var(--deep-navy); }
+}
+/* Mobile fixes: 375x667 specific refinements */
+@media (max-width: 480px) {
+    /* Ensure hamburger visibility */
+    .nav-toggle { display: flex; z-index: 2000; }
+    .nav-toggle span { background: var(--deep-navy); }
+
+    /* Prevent contact media from clipping */
+    .contact .container { padding: 0 12px; }
+    .contact img { max-width: 100%; height: auto; }
+    .contact-content img { width: 100%; max-width: 100%; height: auto; max-height: 220px; object-fit: cover; }
+
+    /* Equalize and center cards */
+    .contact-grid { grid-template-columns: 1fr; gap: 1rem; justify-items: center; align-items: stretch; width: 100%; }
+    .contact-card { width: 100%; height: 100%; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; }
+
+    /* Form should not clip */
+    .contact-form { padding: 1.25rem; width: 100%; max-width: 100%; margin: 0; }
+    .contact-form *, .contact *, .contact { box-sizing: border-box; }
+    .form-group input, .form-group select, .form-group textarea { max-width: 100%; }
+
+    /* Chat widget inset */
+    .support-widget { right: 8px; left: auto; bottom: max(12px, env(safe-area-inset-bottom)); z-index: 10000; }
+    .widget-toggle { width: 48px; height: 48px; }
+    .widget-container { right: 8px; left: auto; width: 84vw; max-width: 480px; height: 60vh; bottom: 64px; }
+
+    /* Footer centering */
+    .footer-content, .footer-section { text-align: center; }
+    .social-links { justify-content: center; }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+    .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; justify-items: stretch; }
+}
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -358,7 +565,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     color: var(--text-light);
-    padding: 120px 0 80px;
+    padding: 180px 0 80px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -369,6 +576,7 @@ body {
 .hero-top-text {
     text-align: center;
     margin-bottom: 3rem;
+    margin-top: 2rem;
     width: 100%;
     padding: 0 20px;
 }
@@ -381,6 +589,7 @@ body {
     margin: 0;
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 1rem;
 }
 
 .hero-container {
@@ -398,6 +607,7 @@ body {
 
 .hero-content {
     padding: 0 20px;
+    margin-top: 1rem;
     text-align: left;
 }
 
@@ -2691,6 +2901,114 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* Contact section mobile refinements (e.g., 375x667) */
+    .contact {
+        padding: 40px 0;
+    }
+    /* Reduce side padding only in contact section to avoid clipping */
+    .contact .container {
+        padding: 0 12px;
+    }
+
+    .contact img {
+        height: auto;
+        max-height: 260px;
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+    .contact-content img {
+        height: 240px;
+        max-height: 240px;
+        object-fit: cover;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .contact-card {
+        min-height: 220px;
+        padding: 1.25rem 1rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-form {
+        padding: 1.25rem;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    /* Ensure form controls cannot overflow */
+    .contact-form *,
+    .contact *,
+    .contact {
+        box-sizing: border-box;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        max-width: 100%;
+    }
+
+    /* Ensure the page has space for the chat widget */
+    body {
+        padding-bottom: 80px;
+    }
+}
+
+/* Prefer 2x2 layout on small-but-not-tiny screens */
+@media (min-width: 481px) and (max-width: 640px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        justify-items: stretch;
+    }
+}
+
+/* Keep support widget visible and sized for mobile */
+@media (max-width: 480px) {
+    /* Center cards in sections above contact on small screens */
+    .services-grid,
+    .industries-grid {
+        justify-items: center;
+        text-align: center;
+    }
+    .service-card,
+    .industry-card {
+        width: 100%;
+    }
+
+    .support-widget {
+        bottom: max(12px, env(safe-area-inset-bottom));
+        right: 16px;
+        left: auto;
+        z-index: 10000;
+    }
+    .widget-toggle {
+        width: 52px;
+        height: 52px;
+    }
+    .widget-container {
+        bottom: 64px;
+        right: 16px;
+        width: 88vw;
+        height: 60vh;
+        max-width: 520px;
+        left: auto;
+    }
+
+    /* Footer centering on small screens */
+    .footer-content { text-align: center; }
+    .footer-section { text-align: center; }
+    .social-links { justify-content: center; }
+}
     .success-story {
         padding: 3rem 0;
         min-height: 40vh;
@@ -3440,13 +3758,25 @@ html {
 .page-hero {
     background: linear-gradient(135deg, var(--deep-navy) 0%, var(--accent-blue) 100%);
     color: white;
-    padding: 120px 0 80px;
+    padding: 140px 0 100px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
+    min-height: 70vh;
     position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
 }
 
 .page-hero .container {
@@ -3458,68 +3788,74 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
+    min-height: 70vh;
+    position: relative;
+    z-index: 2;
 }
 
 .page-hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
     padding: 0 20px;
-    line-height: 1.2;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
 }
 
 .page-hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 600px;
+    font-size: 1.3rem;
+    opacity: 0.95;
+    max-width: 700px;
     margin: 0 auto;
     padding: 0 20px;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-weight: 300;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design for Page Hero */
 @media (max-width: 768px) {
     .page-hero {
-        padding: 100px 0 60px;
-        min-height: 50vh;
+        padding: 120px 0 80px;
+        min-height: 60vh;
     }
     
     .page-hero .container {
         padding: 0 20px;
-        min-height: 50vh;
+        min-height: 60vh;
     }
     
     .page-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         padding: 0 15px;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .page-hero p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         padding: 0 15px;
     }
 }
 
 @media (max-width: 480px) {
     .page-hero {
-        padding: 80px 0 40px;
-        min-height: 40vh;
+        padding: 100px 0 60px;
+        min-height: 50vh;
     }
     
     .page-hero .container {
         padding: 0 15px;
-        min-height: 40vh;
+        min-height: 50vh;
     }
     
     .page-hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         padding: 0 10px;
     }
     
     .page-hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 0 10px;
     }
 }
@@ -4777,19 +5113,35 @@ html {
 
 /* Contact Info Section */
 .contact-info-section {
-    padding: 80px 0;
-    background: #f7fafc;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+}
+
+.contact-info-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
 }
 
 /* Dark mode styles for contact info section */
 .dark .contact-info-section {
-    background: var(--bg-secondary-dark);
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
 }
 
 .dark .contact-method {
     background: var(--bg-secondary-dark);
     border: 1px solid var(--border-dark);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark .contact-method:hover {
+    border-color: rgba(66, 153, 225, 0.4);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 .dark .contact-method h3 {
@@ -4800,23 +5152,68 @@ html {
     color: var(--text-secondary-dark);
 }
 
+.dark .section-header h2 {
+    color: #e2e8f0;
+}
+
+.dark .section-header p {
+    color: #a0aec0;
+}
+
 .contact-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-method {
     background: white;
-    padding: 2rem;
-    border-radius: 15px;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(226, 232, 240, 0.6);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.contact-method::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4299e1, #3182ce, #2b6cb0);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    border-color: rgba(66, 153, 225, 0.3);
+}
+
+.contact-method:hover::before {
+    transform: scaleX(1);
 }
 
 .contact-method img {
@@ -4833,38 +5230,89 @@ html {
 }
 
 .method-icon {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, #4299e1, #3182ce);
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4299e1, #3182ce, #2b6cb0);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 10px 25px rgba(66, 153, 225, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover .method-icon {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(66, 153, 225, 0.4);
 }
 
 .method-icon i {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .contact-method h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
     color: #1a365d;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.01em;
 }
 
 .contact-method p {
-    color: #718096;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
 }
 
 .contact-method .btn-outline {
     margin-top: auto;
     align-self: center;
     text-align: center;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #4299e1;
+    color: #4299e1;
+    background: transparent;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-method .btn-outline:hover {
+    background: #4299e1;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(66, 153, 225, 0.3);
+}
+
+/* Enhanced link styling within contact methods */
+.contact-method a:not(.btn-outline) {
+    color: #4299e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.contact-method a:not(.btn-outline):hover {
+    color: #2b6cb0;
+    border-bottom-color: #2b6cb0;
+}
+
+/* Phone number styling */
+.contact-method a[href^="tel:"] {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2b6cb0;
+}
+
+.contact-method a[href^="tel:"]:hover {
+    color: #1a365d;
 }
 
 /* Ensure all contact methods have consistent height and button alignment */
@@ -4886,26 +5334,142 @@ html {
     margin-bottom: 1rem;
 }
 
+/* Enhanced section header styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a365d;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #4a5568;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4299e1, #3182ce);
+    border-radius: 2px;
+}
+
 /* Status styling for business hours */
 .contact-method .status {
     margin-top: auto;
     align-self: center;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+    transition: all 0.3s ease;
 }
 
 .contact-method .status.online {
-    background: #10b981;
+    background: linear-gradient(135deg, #10b981, #059669);
     color: white;
+    position: relative;
+}
+
+.contact-method .status.online::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; transform: translateY(-50%) scale(1); }
+    50% { opacity: 0.5; transform: translateY(-50%) scale(1.2); }
+    100% { opacity: 1; transform: translateY(-50%) scale(1); }
 }
 
 /* Dark mode status styling */
 [data-theme="dark"] .contact-method .status.online {
     background: #059669;
     color: white;
+}
+
+/* Enhanced responsive styles for contact methods */
+@media (max-width: 768px) {
+    .contact-info-section {
+        padding: 80px 0;
+    }
+    
+    .contact-methods {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .contact-method {
+        padding: 2rem 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .section-header p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info-section {
+        padding: 60px 0;
+    }
+    
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .contact-method {
+        padding: 1.5rem 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+}
+
+/* Ensure single-column layout for very small screens where auto-fit might misbehave */
+@media (max-width: 640px) {
+    .contact-methods {
+        grid-template-columns: 1fr !important;
+    }
+    .contact-method {
+        width: 100%;
+    }
 }
 
 /* Contact Form Section */
@@ -5768,7 +6332,7 @@ html {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 160px 0 60px;
+        padding: 180px 0 60px;
         min-height: 80vh;
     }
     
@@ -5815,7 +6379,7 @@ html {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 140px 0 40px;
+        padding: 160px 0 40px;
         min-height: 70vh;
     }
     
